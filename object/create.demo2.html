@@ -1,0 +1,16 @@
+<script>
+    var obj1 = { a: 10, b: 20, c: { d: 30 } };
+  
+    var obj2 = Object.create(obj1);
+    console.log(obj1, obj2);                     // obj2 has all things in prototype
+  
+    console.log(obj1.a, obj1.b, obj1.c.d);       //10 20 30
+    console.log(obj2.a, obj2.b, obj2.c.d);       //10 20 30
+  
+    obj2.a = 15;           // it adds a new property 'a' in obj2 with value 15
+    obj2.b = 25;           // it adds a new property 'b' in obj2 with value 25
+    obj2.c.d = 35;         // obj2.c = { d: 35 }
+  
+    console.log(obj1.a, obj1.b, obj1.c.d);       //10 20 30
+    console.log(obj2.a, obj2.b, obj2.c.d);       //15 25 35
+  </script>
