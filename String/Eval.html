@@ -1,0 +1,24 @@
+<html>
+
+<body>
+    <script>
+        let str1 = '2+3+4';
+        console.log(str1);     //2+3+4
+        document.write(eval(str1),`<br> <br>`); //9
+
+        let str2 = new String('2+3+4');
+        console.log(str2);     //object 
+        document.write(eval(str2),`<br> <br>`); //2+3+4   eval method cant eval string object
+
+        // Convert String-Object to string-literal
+        let str3 = str2.valueOf();              //Converting String-Object to String-literal
+        console.log(str3);     //2+3+4
+        document.write(eval(str3),`<br> <br>`); //9
+
+        console.log(23)                  // it cant as its a number not string
+        console.log(eval(`23`));         //it cant as dont have arithmatic symbols
+        console.log(eval(`2*4+6-2/2`));  //such expression can eval
+    </script>
+</body>
+
+</html>

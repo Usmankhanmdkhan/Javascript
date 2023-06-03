@@ -1,0 +1,23 @@
+<HTML>
+
+<HEAD>
+    <TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+    <script>
+        var a = 10;
+        function f1() {
+            //   var a=20;
+            if (true) {
+                // var a = 30;
+                console.log('block level', a);
+            }
+            console.log(`functional`, a);
+        }
+        f1();
+        console.log(`global`, a);
+    </script>
+</BODY>
+
+</HTML>

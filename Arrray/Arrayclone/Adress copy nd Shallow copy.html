@@ -1,0 +1,49 @@
+<html>
+
+<body>
+	<h1>
+		<script>
+			var a = [10, 20, 30];
+			//Adress copy
+			b = a;                              //address copy no new array created 
+			document.write(a + "<br>");
+			document.write(b + "<br>");
+			b.pop();
+			document.write(a + "<br>");           //while poping value from b array a is also destructuring
+			document.write(b + "<br>");
+
+			//                                         [10,20,30]                     
+			//                                  lets its adress is 1010
+			//                         a=1010                             b=1010
+			//                                   no new array created
+			//                           both variables pointing to same array
+
+			//if you make change in array using a/b varible it will show change with both the varibles 
+			//bcoz both are pointing to same array
+
+
+			document.write("<hr>")
+
+			var x = [10, 20, 30, 40]
+			//Shallow copy
+			y = x.slice();                 //a new array is being created
+			// y = [...x]                  //a new array is being created we can do either way
+			document.write(x + "<br>");
+			document.write(y + "<br>");
+			y.pop();                            //while popping y array x value doesnt affected 
+			document.write(x + "<br>");
+			document.write(y + "<br>");
+
+//                         [10,20,30,40]                     [10,20,30,40]   
+//                        new array created both having different adresses
+//                         x=1010                             b=2020
+//                                     new array created
+//                          both variables pointing to different arrays
+
+//if you make change in array using x/y the change to the particular array happens 
+//bcoz both variables are pointing to different arrays
+
+		</script>
+</body>
+
+</html>

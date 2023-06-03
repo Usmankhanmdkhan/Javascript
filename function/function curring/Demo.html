@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function add(a, b, c) {
+            return a + b + c
+        }
+        console.log(add(1, 2, 3));   //simple function
+
+
+
+        //function currying
+        function sum(a) {
+            return function (b) {
+                return function (c) {
+                    return a + b + c
+                }
+            }
+        }
+        console.log(sum(1)(2)(3));
+
+
+
+        //infinite function currying
+        function addition(a) {          //here we are using fucntion curring and recursion itself
+            return function (b) {
+                if (b) {
+                    return addition(a + b);
+                }
+                else return a;
+            };
+        }
+
+        console.log(addition(1)(2)(3)(4)(5)());
+
+
+    </script>
+</body>
+
+</html>

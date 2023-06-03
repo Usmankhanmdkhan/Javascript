@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="update()">update</button> <!--calling fucntion-->
+    <span id="cn"></span>
+    <button onclick="hello()">sayhello</button>
+
+    <!-- closure is an innner function that has access to varible of outer fucntion even after the outer fucntions execution is completed -->
+
+    <!-- ex:1 -->
+    <script>
+        // let count = 0;
+        // function update() {
+        //     count++;
+        //     document.getElementById('cn').innerText = count;
+        // }
+        // function hello() {         //here count varible is  accesable
+        //     count++;
+        //     console.log(`hello`)
+        // } 
+
+
+        // to avoid count varible accessable to other fucntion -->
+
+        function outer() {
+            let count = 0;
+            function update() {  //either we can use return fucntion update() a fucntion must return a fucntion return is neccesary
+                count++;
+                document.getElementById('cn').innerText = count;
+            }
+            return update;           //or here we can return the fucnction
+        }
+        let update = outer(); //we cant direct call outer() we have to store it in variable and call
+
+        function hello() { //here count varible is not accesable
+            count++;
+            console.log(`hello`)
+        }
+    </script>
+
+
+
+    <!-- ex:2 -->
+    <script>
+
+        function outer1() {
+            let a = 10;                          //a is closure 
+            function inner1() {
+                let b = 20;                      //be is local
+                console.log(a + b);
+            }
+            inner1();
+        }
+
+        outer1();
+
+    </script>
+
+</body>
+
+</html>

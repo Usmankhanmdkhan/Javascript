@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+<body>
+    <script>
+        employees = [
+            { eId: 101, name: "sanjay", hours: 3 },
+            { eId: 102, name: "deepak", hours: 2 },
+            { eId: 103, name: "ajay", hours: 4 }, // monday
+
+            { eId: 102, name: "deepak", hours: 3 },
+            { eId: 103, name: "ajay", hours: 3 }, // tuesday
+
+            { eId: 101, name: "sanjay", hours: 2 },
+            { eId: 102, name: "deepak", hours: 4 }, //wednesday
+        ];
+
+        let result = [];
+
+        employees.map((emp) => {
+            let foundemp = result.find((ele) => { return ele.eId == emp.eId })
+
+            if (!foundemp) {
+                result.push(emp);
+            }
+            else {
+                foundemp.hours = foundemp.hours + emp.hours
+            }
+        })
+        console.log(result);
+
+    </script>
+</body>
+</head>
+
+</html>

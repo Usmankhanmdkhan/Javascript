@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var nestedObject = {
+      data: {
+        info: {
+          stuff: {
+            thing: {
+              moreStuff: {
+                magicNumber: 22,
+                something: "hello",
+                manyMoreStuff: {
+                  number: 44,
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+
+    function contains(obj, searchvalue) {
+      for (let i in obj) {     //from this
+        let value = obj[i];
+        if (typeof value === `object`) {
+          return contains(obj[i], searchvalue)
+        }
+        if (value == searchvalue) {
+          return true
+        }
+        else  return false   
+      }                       //to this      its in for loop
+               // if loop fails it return false no else statement used after the loop over
+    }
+
+    console.log(contains(nestedObject, 44))
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

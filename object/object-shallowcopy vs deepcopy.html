@@ -1,0 +1,27 @@
+<script>
+    //SHALLOW COPY
+    let obj3 = {
+        name: `umar`,
+        add: `purna`,
+        social: { fb: `umarkhan`, insta: `official umarkhan` }
+    };
+
+    let obj4 = Object.assign({}, obj3);
+    console.log(obj4);
+
+    obj3.social.clgname = `Poly`
+    console.log(obj3);
+    console.log(obj4);    //assigning property to obj3's inner object and it is changing in obj4 
+    //inside object copied by reference
+
+    //DEEPCOPY
+    let obj5 = structuredClone(obj3);
+    console.log(obj5);
+
+    obj3.social.gmail=`umar@123`;
+    console.log(obj3);
+    console.log(obj5);    //assigning property to obj3's inner object and it is not changing in obj4 
+    //inner object also cdeep copied
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        `use strict`
+        //using for each we cant return a new array we acan manipulate the current array but cant return it in a new array
+
+
+        let elements = [10, 20, 30];
+
+        // for each take 3 arguments value index and array
+
+        elements.forEach((value, index, array) => {  //for each
+            console.log(value + 10, index, array);
+        })
+
+
+        let Newelements = elements.forEach((value, index, array) => {
+            return value + 10;
+        })
+        console.log(Newelements);  //it will not return new array undefined
+        console.log(elements);   //exiting array
+
+       
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<script>
+    let obj1 = {
+        name: `usman`,
+        add: `nzb`
+    };
+
+    //REFFERENCE COPY
+    obj2 = obj1;                //reference copy 
+    console.log(obj1);
+    console.log(obj2);
+
+    obj2.clg = `nareshit`
+    console.log(obj2);
+    console.log(obj1);       //assigning property to obj2 and its changing in obj1 both are refering to same object
+
+
+    //SHALLOW COPY
+    let obj3 = {
+        name: `umar`,
+        add: `purna`
+    };
+
+    obj4 = Object.assign({}, obj3);
+    console.log(obj4);
+
+    obj3.clgname = `Poly`
+    console.log(obj3);  
+    console.log(obj4);    //assigning property to obj3 and itsnot changing in obj4 both are refering to different objects
+
+
+</script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+        let mainPlane = {
+            airline: `Fly India`,
+            aiticode: `FI`,
+            booking: [],
+            book: function (flightnum, name) {
+                console.log(`${name} booked flight on ${this.airline} with ${flightnum} flight number and aiti code ${this.aiticode} ${this.booking.push({ flightname: `${this.airline}`, name: name, aiti: `${this.aiticode}`, flightnum: `${flightnum}` })}`)
+            }//push is used to enter data in array booking
+
+            //here this.used to access varibles or keys inside array itself
+        }
+        console.log(mainPlane);
+        mainPlane.book(553, `Usman`); //fucntion calling with adding parameters (,) and it adds array data too
+
+
+
+        let childPlane = {
+            airline: ` Qatar airways`,
+            aiticode: `CI`,
+            booking: [],
+
+        }
+        let book = mainPlane.book;  //stored mainplane objects book function in book variable
+
+        book.call(childPlane, 666, `umar`);   //call method in a childplane object 
+
+        console.log(childPlane);
+
+        book.call(childPlane, 786, `usman`);
+
+        book.call(mainPlane, 888, `imran`);
+
+        book.apply(childPlane, [111, `sandeep`]); //apply method in apply we pass arguments in array 
+        console.log(childPlane);
+
+
+        //bind method
+        let greet = function (fname, lname) {
+            console.log(`welcome ${this.fname} ${this.lname} on coder page`)
+        }
+
+        let user = {
+            fname: `Harry`,
+            lname: `porter`
+        }
+
+        let greets = greet.bind(user)
+        greets();
+
+        let huh = Array.from(mainPlane);     //we can convert object into array.
+        console.log(huh);
+
+
+        let obj = {
+            name: `usman`
+        }
+        console.log(obj);
+        obj.name = `"\Umar"`   //dot notation
+
+        //  obj.last name =`` // it deosnot allow such syntac 
+
+        obj[`last name`] = `Pathan`;   //of notation
+        console.log(obj);
+
+        let x = `name`;
+        console.log(obj.x);  //it doesnt store key value in variable
+
+        console.log(obj[x]);  //it stores.
+
+
+
+
+
+    </script>
+</body>
+
+</html>

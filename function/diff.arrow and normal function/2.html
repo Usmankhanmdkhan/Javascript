@@ -1,0 +1,25 @@
+<html>
+
+<body>
+  <script>
+    let user = {
+      fName: "sachin",
+      lName: "tendulkar",
+      fullName: function () {
+        console.log(this.fName + " " + this.lName); //this=user
+      },
+    };
+    user.fullName();  //called in window object
+
+    let employee = {
+      fName: "sanjay",
+      lName: "samantra",
+      fullName: () => {                             //here as its a arrow function it will throw undefined for this keywords
+        console.log(this.fName + " " + this.lName); //this=window (instead of this. we have to write employee.fName to access)
+      },
+    };
+    employee.fullName(); //called in window object
+  </script>
+</body>
+
+</html>

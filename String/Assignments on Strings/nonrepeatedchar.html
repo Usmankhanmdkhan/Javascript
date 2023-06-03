@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        `use strict`
+        out = `usmana`;
+        // document.write(out.indexOf(`s`));
+        // document.write(out.lastIndexOf(`s`));
+
+        for (let i of out) {
+
+            if (out.indexOf(i) == out.lastIndexOf(i)) {
+                console.log(i);
+                break;                  //break used to give first non repeated element
+            }
+
+        }
+
+        inp = `Umarkhan`;
+        for (let i of inp) {
+            // console.log(inp.indexOf(i));
+            // console.log(inp.lastIndexOf(i));
+
+            if (inp.indexOf(i) == inp.lastIndexOf(i)) {   
+                document.write(i);  //a is repeated hence it will be removed and we get all non repeated elements of string
+            }
+        }
+
+    </script>
+</body>
+
+</html>

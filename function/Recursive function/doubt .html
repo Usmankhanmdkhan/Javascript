@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nestedObject = {
+            data: {
+                info: {
+                    stuff: {
+                        thing: {
+                            moreStuff: {
+                                magicNumber: 22,
+                                something: "hello",
+                                manyMoreStuff: {
+                                    number: 44,
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        };
+
+        function f1(obj,searchvalue) 
+        {
+            for (key in obj){
+                let value = obj[key]
+                if (value===`object`)
+                {
+                    return f1(obj[key],searchvalue)
+                }
+                if(value==searchvalue)
+                {
+                    return true
+                }
+                else return false
+            }
+        
+        }
+         console.log(f1(nestedObject, 44))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<script>
+  function Student(roll, name, add) { //or else we can pass student(clgName=`NareshIt`)
+                                      //{this.clgName=clgName}   for defualt value
+    this.roll = roll;
+    this.name = name;
+    this.add = add;
+  // this.clgName = 'nareshIT';   //we are giving same clg name to every object default no need to pass parameters
+  }
+  Student.prototype.clgName = 'NareshIT';
+
+  let std1 = new Student(101, "pulkit", "bangalore");
+  let std2 = new Student(102, "Akhilesh", "Hyderabad");
+  let std3 = new Student(103, "Sarita", "Pune");
+  console.log(std1, std2, std3);                      //all student objects will have prototype clgName:NareshIT
+
+  console.log(std1.roll, std1.name, std1.add, std1.clgName); //if there is no key as clgName is object 
+  console.log(std2.roll, std2.name, std2.add, std2.clgName); //it checks in prototype if there prints it  
+
+  std1.clgName = 'naresh Technologies';               //its a property not prototype it will shown in std1 only
+  console.log(std1.roll, std1.name, std1.add, std1.clgName);
+  console.log(std2.roll, std2.name, std2.add, std2.clgName);
+  console.log(std3.roll, std3.name, std3.add, std3.clgName);
+
+  std1.course = 'javascript';
+  console.log(std1)
+</script>

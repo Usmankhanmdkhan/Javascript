@@ -1,0 +1,40 @@
+<script>
+
+    //using Object.assign we can combine objects first argument would be target object
+
+    class User {
+        constructor(name, add) {//constructor is a function written without declaring varible hence it goes to prototype
+            this.name = name,
+            this.add = add
+        }
+    }
+    let user1 = new User(`Usman`, `Nzb`);
+    console.log(user1);
+
+    User.prototype.ClgName = `NareshIT`
+    console.log(user1);
+
+    //here user1 is a object and User is a class
+    let details = {
+        age:25,
+        place: `Purna`
+    }
+
+    console.log(details);
+
+    //here are 2 objects now user1 and details if we want to combine details to user1
+    //we use assign for this process....
+
+    //now lets try to move properties of user1 to details
+    Object.assign(details,user1)    //here details is target all properties of user gone to details except prototypeproperties
+    console.log(details); 
+
+    Object.assign(user1,details)    //here user1 is target all properties of details gone to user1;
+    console.log(user1);             //here we moved all properties of details to user1
+
+    console.log(user1.name);
+    console.log(user1.add);
+    console.log(user1.age);
+    console.log(user1.place);
+
+</script>

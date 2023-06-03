@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //increase salary of every employee by 500
+         let employees = [
+            { empId: 101, name: "sachin", sal: 5000 },
+            { empId: 103, name: "Rahul", sal: 6000 },
+            { empId: 104, name: "Ramesh", sal: 9000 },
+            { empId: 102, name: "Deepak", sal: 7000 },
+            { empId: 105, name: "Ram", sal: 5000 }
+        ];
+
+        console.table(employees);
+
+        emp2=employees.map((e)=>{
+            e.sal=e.sal+500;
+            return e;
+        })
+
+        console.table(emp2);
+
+        console.table(employees);
+
+    </script>
+</body>
+</html>

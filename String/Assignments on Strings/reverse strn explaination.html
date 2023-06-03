@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        `use strict`
+
+        let inp= `java`
+        let reverse=``;
+
+        for(let i of inp){
+         console.log(i);        
+         
+         //0=j 1=a 2=v 3=a => 1st i=j its goes to reverse then loops runs and the new i=a now i+reverse=aj and it continuous till end we get reverse = avaj;
+
+         //i=j reverse = j+``                       =>j
+         //i=a reverse  =i+reverse(reverse=j)       =>aj
+         //i=v reverse  =i+reverse(reverse=aj)      =>vaj
+         //i=a reverse  =i+reverse(reverse=vaj)     =>vaaj
+
+         reverse=i+reverse
+        }
+
+        document.write(inp + `<br>`+ reverse)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+
+<body>
+  <script>
+    class Person {
+
+      constructor(name, age, add) {
+        this.name = name;
+        this.age = age;
+        this.add = add;
+      }
+      f1() {
+        console.log("i am f1");
+      }
+      f2 = function () {
+        console.log("i am f2");
+      }
+    }
+    Person.prototype.abc = 10;
+    // Person.prototype.f2 = function(){
+
+    // }
+
+    class Student extends Person {
+      constructor(name, age, add, roll, mark) {
+        super(name, age, add);                        // parent's constructor
+        this.roll = roll;
+        this.mark = mark;
+      }
+    }
+    //while inheriting the properties from one class to another prototype properties cant be inheritate directly.....
+    var std1 = new Student("ajay", 25, "marathalli", 101, 85);
+    // Student.prototype.abc = 20;
+    Student.prototype = Person.prototype;
+    std1.f1();
+    console.log(Person.prototype)
+
+    console.log(std1)
+    console.log(std1.hasOwnProperty("name")); // true  //hasOwnproperty gives true search in only direct properties only
+    console.log(std1.hasOwnProperty("abc")); // false
+    console.log("name" in std1); // true               //in property gives true search in direct property and prototype too
+    console.log("abc" in std1);  // true                
+    console.log("xyz" in std1);  // false
+
+    class Employee extends Person {
+      constructor(name, age, add, eId, sal) {
+        super(name, age, add); // Persons's constructor
+        this.eId = eId;
+        this.sal = sal;
+      }
+    }
+    var emp1 = new Employee("deepak", 26, "BTM", 200, 5000);
+    console.log(emp1);
+  </script>
+</body>
+
+</html>

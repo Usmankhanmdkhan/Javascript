@@ -1,0 +1,20 @@
+<script>
+
+    //using Object.assign we can combine objects first argument would be target object
+    let user = {
+        name: `usman`,
+        add: 'NZB'
+    }
+
+    let Permision1 = { canread: true }
+    let Permision2 = { canwrite: false }
+
+    Object.assign(user,Permision1,Permision2); //here target object is user source objects are permision 1 & 2
+
+    console.log(user);
+
+    console.log(user.name);
+    console.log(user.add);
+    console.log(user.canread);
+    console.log(user.canwrite);
+</script>

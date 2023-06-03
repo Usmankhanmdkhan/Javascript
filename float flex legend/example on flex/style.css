@@ -1,0 +1,10 @@
+.main{display: flex;
+    flex-direction:row;
+    flex-wrap:wrap ;
+    gap: 20px;
+    font-size: xx-large ;
+}
+
+h1{
+    width:auto
+}

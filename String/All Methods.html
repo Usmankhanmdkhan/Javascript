@@ -1,0 +1,30 @@
+<html>
+
+<body>
+  <script>
+     
+    var str1 = "entertainment";
+ 
+    console.log(str1.length);            //13
+    console.log(str1.toUpperCase());     //ENTERTAINMENT
+    console.log(str1.toLowerCase());     //entertainment
+
+    console.log(str1[6]);                //a
+    console.log(str1.at(6));             //a
+    console.log(str1.charAt(6));         //a
+    console.log(str1.charCodeAt(6));     //asceevalue      97
+
+    console.log(str1.concat(" hello"));  //entertainment hello 
+
+    console.log(str1.indexOf("t"));      //2
+    console.log(str1.indexOf("t", 3));   //5   index of 't' after 3rd index 
+    console.log(str1.indexOf("q"));      //-1  its not there
+    console.log(str1.lastIndexOf("t"));  //12
+
+    console.log(str1.includes("men"));   // true
+    console.log(str1.includes("man"));   // false
+  </script>
+
+</body>
+
+</html>

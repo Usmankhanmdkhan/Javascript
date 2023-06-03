@@ -1,0 +1,22 @@
+<script>
+
+    //*at(index)  
+    let names = [`umar`, `usman`, `zeba`, `usman`,`zameer`, `usman`];
+    document.write(`${names.at(1)} <br> <br>`)             //item at 1st index =>usman
+
+
+    //*indexOf it takes two arguments (item,pos)
+    document.write(`${names.indexOf(`usman`)} <br> <br>`)    //index of item => 1
+    document.write(`${names.indexOf(`usman`,2)} <br> <br>`)  //index of item => 3
+    document.write(`${names.indexOf(`zahra`)} <br> <br>`)  //return -1 when item is not there
+    
+    //*lastIndexOf it takes two arguments (item,pos)
+    document.write(`${names.lastIndexOf(`usman`)} <br> <br>`)  //index of item => 5
+
+    //*Include it takes two arguments (item,pos)
+    document.write(`${names.includes(`usman`)} <br> <br>`)    //true
+    document.write(`${names.includes(`zahra`)} <br> <br>`)    //false
+    document.write(`${names.includes(`umar`,1)} <br> <br>`)   //false
+    document.write(`${names.includes(`usman`,2)} <br> <br>`)  //true
+
+</script>

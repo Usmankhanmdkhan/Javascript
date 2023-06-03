@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //expressional fucntion we store fucntion in variable
+        let a = function (name) {         //after = and upto } is called anonymous function
+            return console.log(`whats up ${name}`);
+        }
+        a(`harry`) //function calling //whats up harry
+
+        //parameters are given at time of writting functions and arguments will be their in assigned value
+
+        let invitation = function (name = `no one`, time = `night`) //here name and time have default values 
+        {
+            console.log(`${name} is invited for dinner at ${time}`)
+        }
+        invitation(`umar`, `morning`); //function calling with arguments
+        invitation();  //function calling without arguments
+
+        //normal functions 
+        function fun() {
+            console.log(`hey hiii`)
+        }
+        fun()
+
+        //age calculation function
+        const f = function (birthyear, currentyear = 2023) {
+            let age = currentyear - birthyear
+            return
+            console.log(`  your age is ` + age)//this line not execute becoz return is last step of function
+        }
+        console.log(`your age is ${f(2001, 2002)}`)
+
+        //higher order function , fucntion passed as a argument
+        let UpperCase = function (str) {
+            return str.toUpperCase();
+        }
+        let LowerCase = function (str) {
+            return str.toLowerCase();
+        }
+
+        let transform = function (str, fun) {
+            return fun(str)
+        }
+
+        console.log(transform(`hello`, UpperCase));   //calling function
+
+        //function in function nested higher order function
+
+        let greeting = function (msg) {
+            return function (name) {
+                console.log(`${msg} ${name}`)
+            }
+        }
+        greeting(`welcome`)(`Usman`); //calling function
+
+        //  let greeting =(msg)=>{
+        //     return (name)=>{
+        //     console.log(`${msg} ${name}`)
+        //     }
+        //  }                             //we can do  it with arrow functioon too
+
+        //iffi function
+
+        (function (name) { console.log(`hello ${name}`) })
+            (`rahul`);
+
+
+
+        ///function arguments
+
+        let gg = function () {
+            console.log(arguments);   //shows what written in arguments and length of argument
+        }
+        gg(10, 20);
+
+        let kk = function (a, b, n) {
+            console.log(a + b + n);   //limited arguments
+        }
+        kk(10, 20, 50);
+
+        let gk = function () {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++)
+                sum += arguments[i];
+            console.log(sum);
+        }
+
+        gk(10,10,10,10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

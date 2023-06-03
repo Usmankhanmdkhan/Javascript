@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //OOP
+        //class - structure/blueprint/template for creating Object 
+        //class has only logical existance
+        //class doesn't have physical existance
+
+        //object - Real Entity
+        // every instance of a class
+        // Object has physical existance
+
+        //-a class in javascript is created using constructor function(ES-5).
+        //-a class in javascript is created using class keyword.(ES-6).
+        //-class contains variables(states/properties) and methods(behaviours) inside it.
+
+
+        // ES-5 Way to write a class
+        function Trainer(id, name, subject, exp, time) {//ES-5 with function we write class 
+            this.id = id;                               //here Trainer is consrtuctor function
+            this.name = name;
+            this.subject = subject;
+            this.exp = exp;
+            this.time = time;
+        }
+        let trainer1 = new Trainer(1, 'sanjay', 'Angular', 8, '7.30 PM');
+        let trainer2 = new Trainer(2, 'subba raju', 'Linux', 15, '7.00 AM');
+
+
+        // ES-6 way to write a class
+        class Student {
+            constructor(roll, name, mark, add) {
+                this.roll = roll;
+                this.name = name;
+                this.mark = mark;
+                this.add = add;
+            }
+        }
+        let std1 = new Student(1, 'sameer', 95, 'bangalore')
+        let std2 = new Student(2, 'anil', 90, 'pune')
+
+    </script>
+</body>
+
+</html>

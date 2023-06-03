@@ -1,0 +1,20 @@
+<html>
+
+<body>
+  <script>
+    // search() can take REGEX as parameter
+    // indexOf() cann't
+
+    let str = "This is 15th Session of javascript";
+    let searchInd = str.search(/session/i);   
+    console.log(searchInd);                   //13
+
+    let searchInd2 = str.indexOf(/[\d]/g);
+    console.log(searchInd2);                  // -1 regex not allowed in indexof method
+
+    let searchInd3 = str.indexOf("15");
+    console.log(searchInd3);                  //8   
+  </script>
+</body>
+
+</html>

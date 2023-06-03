@@ -1,0 +1,19 @@
+<html>
+
+<body>
+    <script>
+        let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+        console.log("length is " + cars.length);              //5
+
+        delete cars[2];                                       //deleted `maruti`
+        console.log(cars);                                    //2nd index in empty  
+        console.log("After delete length is " + cars.length); //5
+        console.log(cars[2]);                                 //undefined
+
+        cars[2] = "mahindra";                                 //added mahindra at 2nd index 
+        console.log(cars[2]);                                 //mahindra
+        console.log(cars);                                    //shows added mahindra at 2nd index
+    </script>
+</body>
+
+</html>

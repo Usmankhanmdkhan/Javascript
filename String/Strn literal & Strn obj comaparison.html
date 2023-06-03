@@ -1,0 +1,27 @@
+<html>
+
+<body>
+  <script>
+    let a = 'hello';
+    let b = 'hello';
+    console.log(a == b);      //true both are equal values
+    console.log(a === b);     //true both are equal value and both are string
+
+    let c = 'javascript';
+    let d = new String('javascript');
+    console.log(c == d);      //true both are equal values
+    console.log(c === d);     //false both are equal value but c is string literal and d id string object
+
+
+    let e = new String('welcome');
+    let f = new String('welcome');
+    
+    //when both are objects their adress get compared not value
+
+    console.log(e == f);      //false we are comparing address here not values hence it returns false
+    console.log(e === f);     //false e has a different address for object and f have different
+
+  </script>
+</body>
+
+</html>

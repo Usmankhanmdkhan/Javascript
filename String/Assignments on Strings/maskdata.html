@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        `use strict`
+        // let inp = `congratulations`;
+        // console.log(inp + `<br>`);
+
+        // let maskdata = ``;
+        // let tomask = inp.slice(2,-2);    //here we got `ngratulatio`
+        // console.log(tomask);                  
+        
+        // for(let i of tomask)
+        // {
+        //     maskdata = maskdata +`*`; //here we didnt calling (i) insted of evry i we are addind * in maskdata
+        // }
+        
+        // console.log (inp.slice(0,2)+maskdata+inp.slice(inp.length-2));
+
+
+
+        let inp2=`helloworld`;
+        let firstsec=inp2.slice(0,2);          
+        console.log(firstsec);                          //he
+
+        let secondsec=inp2.slice(2,inp2.length-2);      
+        console.log(secondsec);                         //llowor
+        
+        // secondsecspl=secondsec.split(``);          
+        // console.log(secondsecspl);                         //[l,l,o,w,o,r]
+        
+        // secondsecsplfill=secondsecspl.fill(`*`);          
+        // console.log(secondsecsplfill);                         //[*,*,*,*,*,*]
+       
+        // secondsecsplfilljoin=secondsecspl.join(``);          
+        // console.log(secondsecsplfilljoin);                         //******
+        
+       //we can do above steps in one line;
+        secondsec=secondsec.split(``).fill(`*`).join(``);
+       
+        thirdsec=inp2.slice(inp2.length-2,inp2.length);  //or only inp2.length-2
+        console.log(thirdsec);
+
+        result=firstsec+secondsec+thirdsec
+        console.log(result);  
+
+
+    </script>
+</body>
+
+</html>

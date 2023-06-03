@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            school: `abhinav`,
+            city: `nzb`,
+            booking: [],
+            feedback: function (name, id) {
+                console.log(`he is ${name} id no. ${id}`);
+                this.booking.push({ name: name, id: id, school: this.school })
+            }
+        }
+
+        // console.log(obj);
+
+        console.log(obj.feedback(`usman`, 201));
+        console.log(obj.booking);
+
+
+        // for(let i in obj)
+        // {
+        //     console.log(obj[i],i);  //obj[i] access to value and i access to key
+        // }
+
+        // for (let key of obj){console.log(key)} dont use for of in object
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //      WAP to reverse words
+        // input:- 'This is javascript class'
+        // output:- 'class javascript is this'
+
+        // let sent = prompt(`enter string`);
+
+        // sentsplit= sent.split(` `);
+        // console.log(sentsplit);
+
+        // reverse = sentsplit.reverse()
+        // console.log(reverse);
+
+        // result =reverse.join(` `);
+        // console.log(result);
+
+
+        // document.write(`reverse of ${sent} ====> ${result}`);
+
+        //
+
+        let string = `java is a language`
+        console.log(string, `<br>`, `<br>`);
+
+        let splitstring = string.split(` `);
+        console.log(splitstring, `<br>`, `<br>`); //[java,is,a,language]
+
+        let result = ``;
+
+        for (let i of splitstring) {
+            result = i + ` ` + result
+        }
+
+        console.log(result);
+        console.log(result.split());
+
+
+
+        //method 3
+        let inp = `umar khan pathan`
+        let separator = ` `;
+        let splinp = inp.split(separator);
+        let answer = ``
+
+        console.log(splinp);
+
+        for (let i of splinp) {
+
+            answer = i +separator +answer
+
+        }
+
+        console.log(answer);
+        console.log(answer.split())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

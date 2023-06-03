@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        `use strict`
+        let strng1 = prompt(`enter strng1`);
+        let strng2 = prompt(`enter strng2`);
+
+        let angrame=false;
+
+       if (strng1.length == strng2.length)
+       {
+        for(let i in strng1){
+           
+            if (strng2.includes(strng1[i]))
+                angrame=true;                     //here we dont return anything other than true
+        } 
+        //after complition of loop angrame value goesa to top and it then passes in below if else statement 
+       }
+
+        if (angrame){
+            document.write(`${strng1} is anagrame of ${strng2}`);
+        }
+        else document.write(`${strng1} isnot anagrame of ${strng2}`);
+
+    </script>
+</body>
+
+</html>

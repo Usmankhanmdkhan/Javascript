@@ -1,0 +1,69 @@
+<script>
+    let employees = [
+        { empId: 101, name: "sachin", sal: 5000 },
+        { empId: 103, name: "Rahul", sal: 6000 },
+        { empId: 104, name: "Ramesh", sal: 9000 },
+        { empId: 102, name: "Deepak", sal: 7000 },
+            { empId: 105, name: "Ram", sal: 5000 }
+    ];
+
+    let departments = [
+        { empId: 101, dept: `sales` },
+        { empId: 105, dept: `marketing` }
+    ]
+
+    employees.map((item) => {
+        let dept = departments.find((dept) => dept.empId == item.empId); //it stores object inside dept varible if it has same item empid for coming object from employees array and dept empId
+
+        //in above step we are finding dept.empId inside employees.map which is equal to item.empId
+        //dept=dept.empId==item.empId
+
+        if (dept != undefined) {
+            item.dept = dept.dept;    //emp={dept:sales}
+        }
+        else {
+            item.dept = '';
+        }
+
+        // we can write condition as below too
+        // if (!dept) {                  //or we can write dept==undefined
+        //     item.dept = '';
+        // }
+        // else {
+        //     item.dept = dept.dept;    //emp={dept:sales}
+        // }
+
+        //ex  1st iteration
+        //item                         { empId: 101, name: "sachin", sal: 5000 },
+        //dept                         { empId: 101, dept: `sales` },
+        //dept != undefined            { empId: 101, dept: `sales` },
+        //item.dept = dept.dept;       { empId: 101, name: "sachin", sal: 5000,dept:sales },
+
+        //ex 2nd iteration
+        //item                         { empId: 103, name: "Rahul", sal: 6000 },
+        //dept                         find no matching dept.empId=item.empId (empty)
+        //dept != undefined            dept== undefined
+        //item.dept =``;               { empId: 103, name: "Rahul", sal: 6000, dept:`` },
+
+        //ex 3rd iteration
+        //item                         { empId: 104, name: "Ramesh", sal: 9000 },
+        //dept                         find no matching dept.empId=item.empId (empty)
+        //dept != undefined            dept== undefined
+        //item.dept =``;               { empId: 104, name: "Ramesh", sal: 9000 , dept:`` },
+
+        //ex 4th iteration
+        //item                         { empId: 102, name: "Deepak", sal: 7000 },
+        //dept                         find no matching dept.empId=item.empId (empty)
+        //dept != undefined            dept== undefined
+        //item.dept =``;               { empId: 102, name: "Deepak", sal: 7000 , dept:``},
+
+        //ex 5th iteration
+        //item                         { empId: 105, name: "Ram", sal: 5000 },
+        //dept                         { empId: 105, dept: `marketing` }                  
+        //dept != undefined            { empId: 105, dept: `marketing` }   
+        //item.dept =``;               { empId: 102, name: "Deepak", sal: 7000 , dept:marketing},
+    
+    })
+
+    console.table(employees);
+</script>

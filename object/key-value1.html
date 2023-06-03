@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      let employees = [
+        { eId: 101, name: "sanjay", sal: 5000 },
+        { eId: 104, name: "deepak", sal: 8000 },
+        { eId: 103, name: "ranjan", sal: 7000 },
+        { eId: 102, name: "manoj", sal: 9000 },
+      ];
+
+      //nested for loop use to print keys
+      //for emp in emplyees give one one object
+      for (let emp of employees) {
+      //for key in emp gives one one key of every emp 
+        for (let key in emp) {
+          document.write(key + "-" + emp[key] + "  ");
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

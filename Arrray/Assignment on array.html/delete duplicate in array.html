@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 5. write a program to delete the duplicate elements from an array.
+        let a = [10, 50, 60, 264, 9, 359, 10, 60, 265, 50, 95, 8, 656];
+
+        // // let newarr = a.filter((e,a,q)=>{
+        // // //console.log(e);                 //it gives elements 
+        // // //console.log(a);                 //it gives index 
+        // // //console.log(q);                 //it gives array
+        // // })
+
+        let newarr = a.filter((item, pos) => {
+
+            //console.log(a.indexOf(item));    //[0,1,2,3,4,5,0,2,8,1,10,11,12]
+            //console.log(pos);                //[0,1,2,3,4,5,6,7,8,9,10,11,12]
+            return a.indexOf(item) == pos;  //[10,50,60,264,9,359,265,95,8,656]
+            
+        });
+
+        console.log(newarr);
+ 
+        //for non repeated items
+
+        // let result=[];
+        // for(let i of a ){
+        //  if(a.indexOf(i) === a.lastIndexOf(i)){
+        //     result.push(i);
+        //  }
+        //  else result
+        // }
+
+        // console.log(result);        //this only give non repeated things [264, 9, 359, 265, 95, 8, 656]
+
+
+        //for only repeated items
+        
+        // let result=[];
+        // for(let i of a ){
+        //  if(a.indexOf(i) != a.lastIndexOf(i)){
+        //     result.push(i);
+        //  }
+        //  else result
+        // }
+
+        // console.log(result);        //this only give repeated things only [10,50,60,10,50,60];10,50,60
+         
+    </script>
+</body>
+
+</html>

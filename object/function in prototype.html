@@ -1,0 +1,21 @@
+<script>
+    class Employee {
+      constructor(id, name, sal) {
+        this.id = id;
+        this.name = name;
+        this.sal = sal;
+      }
+      displayInfo() {                                       // prototype method
+        console.log(this.id, this.name, this.sal, this.CEO)   
+      }
+      f1 = function () {                                    // class method
+        console.log('f1...')
+      }
+    }
+    Employee.prototype.compName = 'Microsoft';
+    Employee.prototype.CEO = 'satya nadella';
+  
+    let emp1 = new Employee(101, 'sanjay', 5000);
+    console.log(emp1)
+  
+  </script>

@@ -1,0 +1,27 @@
+<script>
+    let arr = [`purna`, `nanded`, `parbhani`];
+    let a = [10, 20, 30, 40];
+
+
+    // map method gives a return array as well as it takes three attributes value,index,array
+    
+    arr.map((value) => {
+        console.log(value)                //printing array members one by one
+    });
+
+    arr.map((value, index) => {
+        console.log(value, index)         //2nd parameter will be index number
+    });
+
+    arr.map((value, index, array) => {
+        console.log(value, index, array)  //3rd parameter will be array
+    });
+
+    let b = a.map((value) => {
+        return (value + 10);               //it returns a new array
+    });
+
+    console.log(a);
+    console.log(b);
+
+</script>

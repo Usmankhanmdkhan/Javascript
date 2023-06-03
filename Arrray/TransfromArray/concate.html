@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+
+        let a = `ramesh`;
+        let b = `20`;
+        console.log(a + b);       //using  +sign 
+        console.log(a.concat(b)); //using  concat
+        c = [`rahim`];
+        d = [`harry`];
+
+        console.log(c.concat(d)); //using  concat  //[rahim,harry]
+
+        let e = [...c, ...d];     //rest operater
+        console.log(e);           //[rahim,harry]
+
+        let veg=[`apple`,`grapes`,`banana`];
+
+        console.log(veg.length) ;   //3
+        console.log(veg);           //[`apple`,`grapes`,`banana`]
+        console.log(veg.toString());//apple,grapes,banana
+        console.log(veg.join(`+`)); //apple+grapes+banana
+        
+        let j=`45`
+        console.log(j);  //45   it is string 
+
+        j=  Number(j);
+        console.log(j); //45    it is number
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

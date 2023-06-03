@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=50;
+        console.log(a , typeof a);
+        a= String(a);//converted to string
+        console.log(a , typeof a);
+        let b=`hello`
+        console.log(a.concat(b));
+
+        console.log(b.length);
+        console.log(b[0]);
+        console.log(b.indexOf (`l`));  //what is at index 1
+        console.log(b.includes(`e`));  //is it includes char
+        console.log(b.toUpperCase()); //write in uppercase
+        console.log(b.slice(0,3));  //write from 0 index to 3rd place not index
+        console.log(b.split());     //convert string into array
+        console.log(b.charAt(1));  //charcter at index 1
+        console.log(`Usman said "\hey come on" `) //it allows to write symbols and quoted things
+
+        let c=`10+30`;              //type of c in string
+        let d=new String(`20+30`); //type of d is object
+        console.log(c);//10+30
+        console.log(d);//object 20 + 30
+
+        console.log(eval(c)); //40
+        console.log(eval(d)); //cant do eval with String object
+
+        let e= d.valueOf();   //convert string object to string 
+        console.log(eval(e)); //now it would give desired result 50
+
+        let str=`hello`;
+        console.log(str[4]);  //o
+        str[4]=`k`
+        console.log(str);     //string are immutable hence it doesnt change it will be hello only
+
+
+
+        
+        
+
+        
+
+
+    </script>
+</body>
+</html>

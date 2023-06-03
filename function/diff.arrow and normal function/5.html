@@ -1,0 +1,28 @@
+<script>
+    class Employee {
+      name = 'sanjay';
+      sal = 5000;
+  
+      displayInfo1() {
+        console.log('displayInfo-1')
+        console.log(this.name, this.sal)
+      }
+      
+      displayInfo2 = () => {
+        console.log('displayInfo-2', this.name, this.sal)
+      }
+    }
+    let emp1 = new Employee();
+       emp1.displayInfo1();
+       emp1.displayInfo2();
+  
+    let a = emp1.displayInfo1;
+    //a();                             cant store expression fuction outside object in variable.
+  
+    let b = emp1.displayInfo2;
+    b();
+    let c = b;
+    c();
+    let d = c;
+    d();
+  </script>

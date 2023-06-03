@@ -1,0 +1,20 @@
+.one{
+    background-color: blue ;
+    color: red;
+    width: 320px;
+    float: left;
+}
+
+.two{
+    background-color: rgb(231, 93, 19) ;
+    color: rgb(9, 2, 2);
+    width: 320px;
+    float: left
+}
+
+.three{
+    background-color: rgb(255, 0, 25) ;
+    color: rgb(11, 10, 10);
+    width: 320px;
+    float: right;
+}

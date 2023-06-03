@@ -1,0 +1,14 @@
+<script>
+    let dt = new Date();
+    console.log(dt);
+    console.log(dt.getDay());                //it returns 0,1,2,3,4,5,6
+
+    Date.prototype.getDayName = function () {
+        const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayNumber = this.getDay();
+        return dayNames[dayNumber];
+    }
+
+    let dateObj = new Date();
+    console.log(dateObj.getDayName());
+</script>

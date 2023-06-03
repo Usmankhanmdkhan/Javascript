@@ -1,0 +1,25 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // Adding and removing items during map()
+        // list of words from a list of sentences
+
+        let arr1 = ["js is single threaded", "js is synchronous", "js is object oriented"];
+        res1 = arr1.map(sentence => sentence.split(" "));
+        console.log(res1);
+        //(4) ['js', 'is', 'single', 'threaded']
+        //(3) ['js', 'is', 'synchronous']
+        //['js', 'is', 'object', 'oriented']
+
+
+        res2 = arr1.flatMap(sentence => sentence.split(" "));
+        console.log(res2);
+            //0:"js" 1: "is" 2:"single"  3:"threaded" 4:"js" 5:"is" 6 :"synchronous" 7:"js" 8:"is" 9:"object" 10:"oriented"
+    </script>
+</body>
+
+</html>

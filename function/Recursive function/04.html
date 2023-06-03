@@ -1,0 +1,43 @@
+<html>
+
+<body>
+  <script>
+    var nestedObject = {
+      data: {
+        info: {
+          stuff: {
+            thing: {
+              moreStuff: {
+                magicNumber: 22,
+                something: "hello",
+                manyMoreStuff: {
+                  number: 44,
+                },
+              },
+            },
+          },
+        },
+      },
+    };
+
+    let hasIt = contains(nestedObject, 44); // true
+    let doesntHaveIt = contains(nestedObject, "hiii"); // false
+    console.log(hasIt, doesntHaveIt);
+
+    function contains(obj, searchValue) {
+      for (let key in obj) {
+        let value = obj[key];
+
+        if (value === searchValue) {
+          return true;
+        }
+        if (typeof value === "object") {
+          return contains(obj[key], searchValue);     //obj[key]=value
+        }
+      }
+      return false;
+    }
+  </script>
+</body>
+
+</html>

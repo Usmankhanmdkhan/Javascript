@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = ["abc", "def", "ghi", "jkl", "yz", "mno"];
+        let arr2 = ["mno", "pqr", "stu", "vwx", "yz", "abc"];
+
+        //first method
+        for (x of arr1) {
+            for (y of arr2) {
+                if (x == y) {
+                    console.log(y);  //we can either write (x) insted of (y)
+                }
+            }
+        }
+
+        //second method 
+        // let arr3 = [];
+        // for (let i of arr1) {
+        //     if (arr2.includes(i)) {
+        //         arr3.push(i);          //or we can do console.log(i)
+        //     }
+        // }
+        // console.log(arr3);
+
+      
+
+    </script>
+
+</body>
+
+</html>

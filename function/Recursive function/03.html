@@ -1,0 +1,46 @@
+<html>
+
+<body>
+  <script>
+    const user = {
+      name: "sanjay",
+      age: 30,
+      cars: ["tata", "honda"],
+      address: {
+        city: "bangalore",
+        pin: [],
+        xyz: {
+          a: 10,
+          b: [],
+          c: 30,
+          d: {
+            e: [],
+            f: {
+              g: 1,
+              h: []
+            }
+          }
+        },
+      },
+      emails: [],
+    };
+    console.log(recursiveSearch(user));
+
+
+    function recursiveSearch(obj, results = []) {
+      const finalArr = results;                              //finalArr=[] cant we write it as 
+      for (key in obj) {
+        let value = obj[key];
+        if (Array.isArray(value) && value.length == 0) {
+          finalArr.push(key);
+          
+        } else if (typeof value === 'object') {
+          recursiveSearch(value, finalArr);
+        }
+      }
+      return finalArr;
+    };
+  </script>
+</body>
+
+</html>

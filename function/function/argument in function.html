@@ -1,0 +1,29 @@
+<script>
+
+let gk= function(){
+
+if (arguments.length == 0)
+{
+    console.log(`no paramerters`)
+}
+
+else{
+    // let sum=0;
+    // for (let i =0; i<arguments.length; i++)
+    // sum+=arguments[i];
+    // console.log(sum);
+    let sum=0;
+    for(let i of arguments){
+        sum=sum+i
+        //console.log(sum);   //if i console here it gives me value in each cycle like//60,100,150,200 
+    }
+    console.log(sum);//gives final value
+}
+}
+gk(60,40,50,50);
+</script>
+
+<!-- note -->
+
+<!-- for in loop through of index as i and i[item] as value of index -->
+<!-- for of loop through of i as value of index -->

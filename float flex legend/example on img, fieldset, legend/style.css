@@ -1,0 +1,16 @@
+fieldset{
+    border: 15px solid rgb(250, 106, 10);
+    border-radius: 20px; 
+    text-align: center;}
+
+img{
+    border-radius: 15px;
+}
+
+legend{
+    font-size:xx-large ;
+    font-weight: 700; 
+    font-family: Arial, Helvetica, sans-serif; 
+    color: rgb(255, 136, 0);
+    background-color: blue; 
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let employees = [
+            { empId: 101, name: "sachin", sal: 5000 },
+            { empId: 103, name: "Rahul", sal: 6000 },
+            { empId: 104, name: "Ramesh", sal: 9000 },
+            { empId: 102, name: "Deepak", sal: 7000 },
+            { empId: 105, name: "Ram", sal: 5000 }
+        ];
+        //declare array of employees & add "comp:ibm" to every employee;
+        let arr = employees.map((e) => {
+            e.com = `ibm`;
+            return e;                             //after manipulation return is mandatory
+        });                                       //it changes exiting arrray data  create new array
+        console.table(arr);
+        console.table(employees);
+
+        employees.map((e) => {
+            return e.dept = `Mechanical`           //return at start or end in above example
+        })
+
+        console.table(employees);
+
+        // employees.forEach((e) => e.com2 = `toyota`);    //it cant be store in variable
+        // console.table(employees);                       //it changes exiting arrray data not create new array
+
+    </script>
+</body>
+
+</html>

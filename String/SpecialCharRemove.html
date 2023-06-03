@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+  <body>
+    <script>
+      let input = "s@ach#i$n";
+      let only_alphabets = input.replace(/[^\w]/g, "");
+      console.log(only_alphabets);
+      let only_special = input.replace(/[\w]/g, "");
+      console.log(only_special);
+
+      console.log(only_alphabets + only_special);
+    </script>
+  </body>
+</html>

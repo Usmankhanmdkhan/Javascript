@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- WAP to reverse a string
+	input:- 'sachin'
+	output:- 'nihcas' -->
+
+    <script>
+        //method one 
+        // let str=`sachin`
+        // console.log(str);
+
+        // let strarr= str.split(``)
+        // console.log(strarr);
+
+        // let reversestr=strarr.reverse();
+        // console.log(reversestr);
+
+        // let joinstr=reversestr.join(``);
+        // console.log(joinstr);
+
+        //in short 
+        // function reverseString(str) {
+        //     return str.split("").reverse().join("");
+        // }
+        // reverseString("sachin")
+
+
+        //method two
+        let str = `sachin`
+        function reverseString(str) {
+            // Step 1. Create an empty string that will host the new created string
+            let newString = "";
+
+            // Step 2. Create the FOR loop
+            /* The starting point of the loop will be (str.length - 1) which corresponds to the 
+               last character of the string, "o"
+               As long as i is greater than or equals 0, the loop will go on
+               We decrement i after each iteration */
+            for (var i = str.length - 1; i >= 0; i--) {
+                newString += str[i]; // or newString = newString + str[i];
+            }
+            /* Here hello's length equals 5
+                For each iteration: i = str.length - 1 and newString = newString + str[i]
+                First iteration:     i = 6 - 1 = 5,         newString = "" + "n" = "n"
+                Second iteration:    i = 5 - 1 = 4,         newString = "n" + "i" = "ni"
+                Third iteration:     i = 4 - 1 = 3,         newString = "ni" + "h" = "nih"
+                Fourth iteration:    i = 3 - 1 = 2,         newString = "nih" + "c" = "nihc"
+                Fifth iteration:     i = 2 - 1 = 1,         newString = "nihc" + "a" = "nihca"
+                Sixth iteration:     i = 1 - 1 = 0,         newString = "nihca" + "s" = "nihcas"
+            End of the FOR Loop*/
+
+            // Step 3. Return the reversed string
+            return newString; // "olleh"
+        }
+        reverseString(str);
+
+        //without comments
+        let reverse = function (str) {
+            let newString = ``;
+            for (i = str.length - 1; i >= 0; i--)
+                newString += str[i];
+            return newString;
+        }
+        document.write(reverse(`sachin`) + `<br>` + `<br>`);
+
+
+        //Third method
+        let inp= prompt(`enter string`);
+        
+        function dig() {
+            let rvrs = ``;
+            for (let i of inp) {
+                rvrs = i + rvrs
+            }
+            return document.write(rvrs + `<br>` + `<br>`);
+        }
+        dig(inp);
+
+        // //or
+        // let strn = `nam`;
+        // let ulta = ``;
+        // for (i of strn) {
+        //     ulta = i + ulta
+        // }
+        // document.write(ulta + `<br>` + `<br>`);
+
+    </script>
+
+
+</body>
+
+</html>

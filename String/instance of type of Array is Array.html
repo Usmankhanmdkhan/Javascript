@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = new String(`hello`);  //string object 
+        console.log(a);
+        console.log(typeof a);        //object
+
+        let b = `hii`;                //string literal
+        console.log(b);
+        console.log(typeof b);        //string
+
+        console.log(a instanceof String);  //true      here a is instance of string class
+        console.log(b instanceof String);  //false     b in not
+
+
+        console.log(a instanceof Array);   //false
+        console.log(a instanceof Object);  //true
+
+
+        let c = [];
+        let d = {};
+
+        console.log(typeof c);    //object
+        console.log(typeof d);    //object
+
+        console.log(c instanceof Object);  //true
+        console.log(d instanceof Object);  //true
+        
+        console.log(c instanceof Array);   //true
+        console.log(d instanceof Array);   //false
+
+        console.log(Array.isArray(c));  //true
+        console.log(Array.isArray(d));  //false
+
+    </script>
+</body>
+
+</html>

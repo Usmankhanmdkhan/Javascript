@@ -1,0 +1,22 @@
+<script>
+    let arr = [10, 20, 30];
+    let arr2 = [];
+
+    for (let i of arr) {
+        let modifieditem = i + 1;
+        arr2.push(modifieditem);
+    }
+
+    //same thing creating new array with modification can done with map....
+
+    let arr3 = arr.map((item) => {
+        return item + 1
+    });
+
+
+    console.log(arr);
+    console.log(arr2);
+    console.log(arr3);
+
+
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    
+    
+    let ar = [`umar`,`usman`];
+    console.log(ar);
+    console.log(Array.isArray(ar));//asking is it array?  ans: true
+    
+    //join convert array into string
+    let arr = ar.join(` `); 
+    console.log(arr);              //convert array to string  join with space where comma is there => umar usman
+
+    //split convert string into array and can split array into different structure
+
+    console.log(arr.split(``));    //split array and return ['u','m','a','r',' ','u','s','m','a','n']
+    console.log(arr.split(` `));   //split array and return [`umar`,`usman`]
+
+    console.log(...arr);           //convert array into string with everysingle element seperated
+                                   //u m a r   u s m a n
+
+
+    let mainplane = {
+      name: `usman`,
+      city: `Nizamabad`,
+      code: 1212,
+      symbol: [101]
+    }
+    let name=`usman`
+
+    Newplane=(Array.from(mainplane));
+    console.log(Newplane);                 //we can convert object into array.
+    console.log(Array.from(name));         //we can convert string into array.
+  
+
+    let boss = `how are you`
+    console.log(boss.split(` `));          //split string from a space to an array.
+    console.log(Array.from(boss));         //convert string into an array with every single content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<script>
+    /* Regular: 'this' is dynamic, it changes (from where it is called)
+    Arrow : 'this' is not dynamic, where it is declared */
+
+    function f1() {
+        console.log('this is f1');
+        console.log(this);                            //this = window (f1 is called from window object)
+    }
+    f1(); // global - this = window
+
+    let f2 = () => {
+        console.log('this is f2');
+        console.log(this);                            //this = window (f2 is declared in window)
+    }
+    f2();
+</script>
+
+

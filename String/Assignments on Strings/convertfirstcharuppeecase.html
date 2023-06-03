@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inp=`umar is a boy`;
+        let sinp=inp.split(` `);
+        console.log(sinp);
+        let result=``;
+
+        for (let data of sinp)
+        {
+
+          //here it takes every single character as data ==> umar, is , a , boy
+          
+
+          let firstchar= data.at(0);  //we can use data.CharAt(0) or .data[0];
+          //data[0]==>u,i,a,b
+          //firstchar==>data[0]==>u,i,a,b
+
+          data=data.replace(firstchar,firstchar.toUpperCase());
+          //data ==> umar,is,a,boy
+          //in replace method (firstchar,firstchar.toUpperCase())
+          //firstchar(u,i,a,b),firstchar.toUpperCase()(U.I,A,B)
+          
+          result=result+` `+data
+          //here result is empty at first and data become [Umar , Is , A, Boy];
+          //sending these to empty result string one by one by adding in string,
+          
+        }
+
+        console.log(result);
+    </script>
+</body>
+</html>

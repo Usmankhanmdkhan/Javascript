@@ -1,0 +1,29 @@
+<script>
+
+    let employees = [
+        { eId: 101, name: 'sanjay', sal: 3000 },
+        { eId: 102, name: 'sachin', sal: 2000 },
+        { eId: 103, name: 'umar', sal: 3000 },
+        { eId: 104, name: 'usman', sal: 1000 },
+        { eId: 105, name: 'zameer', sal: 5000 },
+    ]
+    //*findindex
+    let ind = employees.findIndex((emp) => emp.eId == 105)
+    console.log(ind);    //console log it with a variable  in single line no need of return and curly brackets
+
+    console.log(employees.findIndex((emp) => {
+        return emp.name == `umar`
+    }));                //direct console log it and write it with return and curly brackets
+
+    //*findLastindex
+    console.log(employees.findLastIndex((emp) => {
+        return emp.sal == 1000;
+    }));
+
+    //*Filter 
+    filter = employees.filter((emp) => {
+        return emp.sal == 3000;
+    });
+    console.log(filter);
+
+</script>

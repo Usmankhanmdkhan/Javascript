@@ -1,0 +1,33 @@
+<script>
+    ///Adress copy
+    let arr1 = [10, 20, [30, 31], 40]   //10,20,40 are at level one AND  30,31 are at level two
+    let arr2 = arr1                     //Adresscopy array can be changes with any varible it will affect 
+
+    arr2.push(50);
+    console.log(arr1,arr2);            
+</script>
+
+<script>
+    //Shallow copy
+    let arr3 = [10, 20, [30, 31], 40]   //10,20,40 are at level one AND  30,31 are at level two
+    let arr4 = [...arr3]                //shallowcopy if want to have change in any array approch array with different names
+
+    arr3.push(50);
+    console.log(arr3,arr4);             //there is no change in array arr4 when we have change value in arr3 at level 1 
+
+    arr3[2].push(32);
+    console.log(arr3,arr4);             //here arr4 also have change with arr3 as its second level array is in adress copy itself
+</script>
+
+<script>
+    //Shallow copy
+    let arr5 = [10, 20, [30, 31], 40]   //10,20,40 are at level one AND  30,31 are at level two
+    let arr6 = structuredClone(arr5)    //deepcopy if want to have change in any array approch array with different names
+
+    arr5.push(50);
+    console.log(arr5,arr6);             //there is no change in array arr4 when we have change value in arr5 at level 1 
+
+    arr5[2].push(32);
+    arr5.push(60);                      //there will be change in arr5 not in arr6
+    console.log(arr5,arr6);             //here arr4 no change with arr3 as its second level too...
+</script>

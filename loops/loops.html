@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = [`apple`, `mango`, `grape `, `potato`];
+        console.log(a);
+        console.log(a.length); //it length would be 4 and its highest index would be 3
+
+
+        console.log(a[3]); //or //console.log(a.at(3));
+
+        console.log(`**********************************`);
+
+        //use for loop when need some special iteration 
+        for (i = 0; i < a.length; i++) { console.log(a[i]) }        //for loop
+        console.log(`**********************************`);
+
+       
+        //reverse iteration
+        for (j = a.length - 1; j >= 0; j--) { console.log(a[j]) }
+        console.log(`$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$`);
+
+        //use for loop when need some special iteration 
+        for (let i in a) { console.log(a[i], i) }          //for in loop
+        console.log(`??????????????????????????????????????????????????`);
+
+        for (let i of a) { console.log(`${i}`) }               //for of loop
+        console.log(`**********************************`);
+
+        let k = 0;
+        while (k < a.length)                                    //while loop
+        {
+            console.log(`hello ${[k]} and ${a[k]}`); //here k in index and a[k] is value of index
+            k++;
+        }
+        console.log(`**********************************`);
+
+
+        let m = 0                                          //do ehile loop
+        do {
+            console.log(`hii pathe ${[m]}`);
+            m++;
+        }
+        while (m < 10);
+
+    </script>
+</body>
+
+</html>

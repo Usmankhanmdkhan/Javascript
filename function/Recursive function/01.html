@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<script>
+			function power (base , exponent ) {  //(2,5)
+				if ( exponent == 0)
+					return 1;
+				else
+				
+				return base * power (base , exponent - 1); 
+    
+			}
+
+			let base = prompt('enter base value')
+			let exponent = prompt('enter exponent value')
+			let result = power(base,exponent);
+			alert('result is: '+result);
+			
+		</script>
+	</body>
+</html>
+
+(2,0)=> condition fails here
+(2,1)=>2
+(2,2)=>2
+(2,3)=>2
+(2,4)=>2
+(2,5)=>2
+
+result=2*2*2*2*2*1=>32

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputArr = ['b', 'a', 'k', 'e', '', 'c', 'a', 'k', 'e', '', 'e', 'a', 't'];
+        // console.log(inputArr);//['b', 'a', 'k', 'e', '','c', 'a', 'k', 'e', '','e', 'a', 't'];
+
+
+        // let words= inputArr.toString().replaceAll(`,,`,`, ,`); //to string converted array to string or use join
+        // console.log(words);          //b,a,k,e, ,c,a,k,e, ,e,a,t
+
+        // words=words.replaceAll(`,`,``);
+        // console.log(words);                  //bake cake eat   
+        // //console.log(Array.from(words));    //dont word here
+        // console.log(words.split(` `));       //It converts string in array
+
+
+        // let letter=inputArr.join();                //array to string with , in between every element
+        // console.log(letter);                          //b,a,k,e,,c,a,k,e,,e,a,t
+        // console.log(letter.replaceAll(`,,`,`, ,`));   //b,a,k,e, ,c,a,k,e, ,e,a,t
+
+
+        inputArr.forEach((ele, ind) => {
+            if (ele.length == 0) {                //ele.length==0  :   ind=4==>``,ind=9==>``
+                console.log(ele);  //it doesnt give anyhting
+                console.log(ind);  //it gives indexes
+                //ele.replaceAll(``, ` `);  not allowed.....
+
+                inputArr[ind]=ele.replace(``,` `); //The code inputarr[ind] = ele.replace(``,  ); replaces all occurrences of the first argument (empty string in this case) with the second argument (also an empty string) in the string stored in the variable ele. The resulting string is then assigned to the element at index ind of the list inputarr.
+                //at index where ele=`` replace ele with ele=` `;  meaning
+            }
+        });
+
+        console.log(inputArr);
+        console.log(inputArr.join(``).split(` `));
+
+    </script>
+</body>
+
+</html>

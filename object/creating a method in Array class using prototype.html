@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //this kind of prototypes can be accessed in the html file where we write in this html file only
+        let arr = [10, 11, 22, 124];
+        console.log(arr.sort()); //it sort but it will be a string sort not numeric
+
+        Array.prototype.numericsort = function () { //here arrow fucntion is return inside function hence it can be invoked anywhere
+           return this.sort((a, b) => a - b);       //this is used because it can be used in a array where it is called
+        }
+
+        let arr2 = [10, 11, 22, 124];
+        console.log(arr2.numericsort()); //it will return numeric sort and used in every array
+
+        let arr3 = [101, 1111, 122, 121124];
+        console.log(arr3.numericsort()); //it will return numeric sort and used in every array
+
+    </script>
+</body>
+
+</html>

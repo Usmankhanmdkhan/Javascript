@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let account = { accNo: 12345, accBal: 50000 };//object- notencapsulated
+        // console.log(account.accNo, account.accBal);//read
+        // account.accBal = -50000000;     //write
+        // console.log(account.accNo, account.accBal);//read
+
+        function openaccount(initialBal) {
+            console.log(`your account opened with amount ${initialBal=0} rupees`);
+            let accNo = 1122334455;
+            let accBal = initialBal;
+
+            //we have to return an object of functions
+
+            // return {
+            //     displayInfo: function () {
+            //         console.log(accNo, accBal)
+            //     },
+
+            //     deposit: function (amt) {
+            
+            //if(amt<0){
+            //     console.log(`keep ur money`)
+            // }
+            // else { accBal = accBal + amt;}
+            // };
+            // }
+
+            //Or else we can write to fucntion and return functions in object
+
+            function displayInfo() {
+                console.log(accNo, accBal);
+            }
+
+            function deposit(amt) {
+                if (amt < 0) {
+                    alert(`keep ur money with you`)
+                }
+                else accBal = accBal + amt;
+
+            }
+            return { displayInfo, deposit };
+        }
+
+        let encapsulatedAccount = openaccount(5000);
+        console.log(encapsulatedAccount);            //it will give 2 functions cant access varible directely
+        encapsulatedAccount.displayInfo();           //read
+        encapsulatedAccount.deposit(6000);           //we can write
+        encapsulatedAccount.displayInfo();           //read
+        encapsulatedAccount.deposit(-6000);          //not accept it as condition gives alert
+        // encapsulatedAccount.displayInfo();        //nothing happens as condition 
+        encapsulatedAccount.deposit(12000);
+        encapsulatedAccount.displayInfo();
+
+    </script>
+</body>
+
+</html>

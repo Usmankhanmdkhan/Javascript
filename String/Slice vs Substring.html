@@ -1,0 +1,18 @@
+<html>
+
+<body>
+  <script>
+    var a = "entertainment";
+
+    console.log(a.slice(2, 6));      //tert
+    console.log(a.substring(2, 6));  //tert
+    console.log(a.slice(2))          //tertainment  when pass 1 argrument it means start from
+                                     //that index and go till end
+                                     
+    //slice allows negative index & substring doesnot allow negative index
+    console.log(a.slice(2, -1));     //tertainmen
+    console.log(a.substring(2, -1)); // en   => no meaning of this
+  </script>
+</body>
+
+</html>

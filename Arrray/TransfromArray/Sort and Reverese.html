@@ -1,0 +1,59 @@
+<script>
+    let arr = [`nanded`, `armur`,`ambala`,`purna`];
+    let arr2 = [20, 40, 10, 30];
+    let arr3 = [1, 2, 11, 100, 30];
+
+    console.log(arr);
+    console.log(arr2);
+    console.log(arr3);
+
+     //*Reverse
+    let revarr=arr.reverse();
+    let revarr2=arr2.reverse();
+    let revarr3=arr3.reverse();
+    
+    console.log(revarr);
+    console.log(revarr2);
+    console.log(revarr3);
+
+    //*sort
+
+    console.log(arr.sort());          //alphabatical order [ambala,'armur', 'nanded', 'purna']
+    console.log(arr2.sort());         //[10, 20, 30, 40] 
+    console.log(arr3.sort());         //[1,100,11,2,30]   by default it gives data as per alphabetic
+                                      //order
+
+    //Sort with own logic accending order
+    console.log(arr3.sort((a,b)=>{
+        return a-b;
+    })); 
+
+    //Sort with own logic deccending order
+    console.log(arr3.sort((a,b)=>{
+        return b-a;
+    }));       
+
+    let employees = [
+        { eId: 101, name: 'sanjay', sal: 3000 },
+        { eId: 102, name: 'sachin', sal: 2000 },
+        { eId: 103, name: 'umar', sal: 3000 },
+        { eId: 104, name: 'usman', sal: 1000 },
+        { eId: 105, name: 'zameer', sal: 5000 },
+    ];
+
+    //sort array of object with eID
+    console.log(employees.sort((e1,e2)=>{
+        return e2.eId-e1.eId;
+    }));
+
+    //sort array of object with name
+    console.log(employees.sort((e1,e2)=>{
+        return e1.name-e2.name;
+    })); 
+                                         //it doesnt give expected output
+    //sort array of object with name
+    console.log(employees.sort((e1,e2)=>{
+        return e1.name.localeCompare(e2.name) //local compare used to - strings
+    }))                                      //it  gives expected output
+   
+</script>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //WAP to find longest word in a sentence
+        // input:- 'this is javascript class'
+        // output:- javascript
+        `use strict`
+        let inp = `javascript is a language dont you know that motherfucker`;
+        splinp = inp.split(` `);
+        console.log(splinp);
+
+        // let arr = splinp.sort()
+        // console.log(arr);
+
+        // let arr1 = splinp.sort((a,b)=>{
+        //     return a-b
+        // })
+        // console.log(arr1);
+
+        // let arr2 = splinp.sort((a,b)=>{
+        //     return a-b
+        // })
+        // console.log(arr2);        its not gives expected result as not sure how to substract
+
+        // let arr3 = splinp.sort((a, b) => {
+        //     return a.length - b.length
+        // })
+        // console.log(arr3); //we can reverse  this array or else direct below step and find [0]
+
+        let arr4 = splinp.sort((a, b) => {
+            return b.length - a.length     //... sorting it with length
+        })
+        console.log(arr4);
+
+
+        console.log(arr4[0]);  //its is a largest word
+
+
+        // second method
+        let inp1 = `umar is a cool student`; //string 
+        let spltinp1 = inp1.split(` `);     //converted into arrow
+        let result = ``                     //empty string,
+
+        for (let i of spltinp1) {
+
+    //here i= umar,is,a,cool,student.
+    //initially result.length = 0;
+    //if(i.length>result.length) i=umar => i.length=umar.length=4 ==> i.length>result length=true;
+    //result=i  ===>  result.length=4;
+    //if(i.length>result.length) i=is   => i.length=is.length=2   ==> i.length>result length=false;
+    //result    ===>  result.length=4;
+    //if(i.length>result.length) i=a    => i.length=a.length=1    ==> i.length>result length=false;
+    //result    ===>  result.length=4;
+    //if(i.length>result.length) i=cool => i.length=cool.length=4    ==> i.length>result length=false;
+    //result    ===>  result.length=4;
+    //if(i.length>result.length) i=student => i.length=student.length=7 ==> i.length>result length=true;
+    //result (result=i)   ===>  result.length=7;  
+    //longest word is student if we have more words also if i.length is more it would be store in result
+
+            if (i.length > result.length)
+                result = i;
+        }
+        document.write(result);
+
+    </script>
+</body>
+
+</html>

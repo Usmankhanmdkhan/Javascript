@@ -1,0 +1,36 @@
+<script>
+    //own written usestate method
+
+    function usestate(defaultvalue) {
+        let value = defaultvalue
+
+        function getvalue() {
+            return value;
+        }
+        function setvalue(newvalue) {
+            return value = newvalue;
+        }
+       
+        return [getvalue,setvalue];
+        
+    }
+
+    const [getvalue,setvalue]=usestate(10);
+    console.log(getvalue());
+
+    setvalue(50);
+    console.log(getvalue());
+
+    console.dir(setvalue);
+
+
+
+    //predefined usestate method
+    const [color,setcolor]=usestate(`red`);
+    console.log(color());  //red
+
+    setcolor(`Blue`);
+    console.log(color()); //blue
+
+    console.dir(setcolor);
+</script>
