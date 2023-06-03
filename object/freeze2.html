@@ -1,0 +1,51 @@
+<html>
+
+<body>
+  <script>
+    let user = {
+      name: "sanjay",
+      age: 20,
+      add: {
+        city: "bangalore",
+        pin: 560037,
+      },
+    };
+    // Object.freeze(user);
+    // user.name = "sanjay-123";
+    // user.add.pin = 123456;
+    // console.log(user);                  //in nested obj if freez applied to outer obj it will not freeze inner obj
+
+    const deepFreeze = (obj) => {
+      if (typeof obj === "object" && !Object.isFrozen(obj)) {
+        Object.freeze(obj);
+        Object.getOwnPropertyNames(obj).forEach((prop) =>     //we can use object.keys(obj) too
+          deepFreeze(obj[prop])
+        );
+      }
+      return obj;
+    };
+    frozenUser = deepFreeze(user);
+    frozenUser.add.pin = 9876543;
+    console.log(frozenUser);
+
+    // let dooit = (user) => {
+    //   if (typeof user === "object" && !Object.isFrozen(user)) {
+    //     Object.freeze(user);
+    //     Object.getOwnPropertyNames(user).forEach((key) =>
+    //     dooit( user[key]));
+    //   }
+    //   return user;
+    // }
+
+
+
+
+      // frozenuser = dooit(user);
+      // frozenuser.add.pin=15426;
+      // console.log(frozenuser);
+
+
+  </script>
+</body>
+
+</html>
