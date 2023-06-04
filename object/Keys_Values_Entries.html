@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script>
+        var emp = {
+            name: "sachin",
+            age: 35,
+            address: "mumbai",
+        };
+        a = Object.keys(emp);        // returns an array
+        console.log(a);              //['name','age','address']
+
+        b = Object.values(emp);      // returns an array
+        console.log(b);              //['sachin',35,'mumbai']
+
+        c = Object.entries(emp);     // array of arrays/entries
+        console.log(c);
+                                     //[ [name,sachin], [age,35], [address,mumbai] ]
+                                     //   entry-1       entry-2     entry-3
+    </script>
+</body>
+
+</html>
