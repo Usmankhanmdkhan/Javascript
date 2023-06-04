@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <script>
+        // new properties cann't be added
+        //you can delete properties , update value of properties    but cant add new property
+        
+        var emp = {
+            name: "sachin",
+            age: 35,
+        };
+        console.log(emp);
+        console.log(Object.isExtensible(emp)); // true
+
+        Object.preventExtensions(emp);
+        console.log(Object.isExtensible(emp)); // false
+
+        
+        emp.age = 40;       //can update value of properties
+        console.log(emp);
+        
+        delete emp.age;     //can delete 
+        console.log(emp);
+
+        emp.add = "mumbai"; //addind new property is not allowed
+        console.log(emp);
+        </script>
+</body>
+
+</html>

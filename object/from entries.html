@@ -1,0 +1,17 @@
+<script>
+    var emp = {
+        name: "sachin",
+        age: 35,
+        address: { street: "marathahalli", city: "bangalore", pin: 560037 },
+        cars: ["tata", "honda", "maruti"],
+    };
+
+    let myEntries = Object.entries(emp);//it returns arrays of key and prop ex: 0:[`name`,`sachin`] 
+                                                                              //1:[`age`,25] 
+                                                                              //2:[`address`,{...}] 
+                                                                              //3:[cars,[...]]
+    console.log(myEntries);
+
+    let empObj = Object.fromEntries(myEntries);   //it will return object from entries
+    console.log(empObj);
+</script>
