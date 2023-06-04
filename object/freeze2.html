@@ -24,6 +24,13 @@
       }
       return obj;
     };
+
+    //what is inside function ----------
+    // console.log(Object.getOwnPropertyNames(user));
+    // Object.getOwnPropertyNames(user).forEach((prop) =>     //we can use object.keys(obj) too
+    //       console.log(user[prop])
+    //     );
+    
     frozenUser = deepFreeze(user);
     frozenUser.add.pin = 9876543;
     console.log(frozenUser);
@@ -36,9 +43,6 @@
     //   }
     //   return user;
     // }
-
-
-
 
       // frozenuser = dooit(user);
       // frozenuser.add.pin=15426;

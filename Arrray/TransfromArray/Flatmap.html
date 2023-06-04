@@ -16,7 +16,10 @@
         //['js', 'is', 'object', 'oriented']
 
 
-        res2 = arr1.flatMap(sentence => sentence.split(" "));
+        // res2 = arr1.flatMap(sentence => sentence.split(" "));
+        res2 = arr1.flatMap((value) => {
+            return value.split(" ");
+        });
         console.log(res2);
             //0:"js" 1: "is" 2:"single"  3:"threaded" 4:"js" 5:"is" 6 :"synchronous" 7:"js" 8:"is" 9:"object" 10:"oriented"
     </script>
