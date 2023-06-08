@@ -10,7 +10,7 @@
         }
         sub();
         
-        let mul = () => { // Where it is declared, add() is lexical scope for mul()
+        let mul = () => {               // Where it is declared, add() is lexical scope for mul()
           console.log(this.a * this.b); // this = obj1
         }
         mul();

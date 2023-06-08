@@ -1,0 +1,13 @@
+<script>
+    console.log(Math.max(20,30,40));          //40
+
+    let a=[20,30,40];
+    console.log(Math.max(a));                 //NAN
+
+    console.log(Math.max(...a));              //40
+
+    console.log(Math.max.apply(null,a));      //40  //here null is an null and a is an array as appply method needs
+    console.log(Math.max.apply({},a));        //40  //here null is an empty object and a is an array as appply method needs
+                                              //to complete the syntax we need to pass obj and array
+
+</script>

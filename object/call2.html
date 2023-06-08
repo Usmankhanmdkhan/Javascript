@@ -1,0 +1,21 @@
+<script>
+    let obj1 = {
+      a: 10,
+      b: 20,
+      add: function () {
+        console.log(this.a + this.b);   //we cant write direct a+b becoz it will point to global scope
+      }
+    }
+    obj1.add();
+  
+
+    let adding = obj1.add;        //we can store a function inside a varible adn use it with call method for an object
+
+    let obj2 = { a: 15, b: 25 }
+    // obj2.add();                //invalid
+    obj1.add.call(obj2);          //valid
+    adding.call(obj2);            //valid
+  
+    let obj3 = { a: 100, b: 200 }
+    obj1.add.call(obj3);          //valid
+  </script>

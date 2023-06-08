@@ -1,0 +1,17 @@
+<script>
+	let obj1 = {
+		a: 10,
+		add: function (b) {
+			return this.a + b;
+		}
+	};
+	let result1 = obj1.add(20);
+	console.log(result1);
+
+	let obj2 = {
+		a: 5
+	}
+	// let result2 = obj2.add(10);
+	let result2 = obj1.add.call(obj2, 10);
+	console.log(result2);
+</script>

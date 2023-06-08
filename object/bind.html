@@ -1,0 +1,14 @@
+<script>
+    function add(a, b) {
+      console.log(this.num + a + b)
+    }
+    add(2, 3);
+  
+    let obj1 = { num: 4 };
+    // add.call(obj1, 2, 3);
+  
+    let sum = add.bind(obj1);    //here we are storing a function in a varible....
+    sum(2, 3);
+    sum(3, 4);
+    sum(4, 5);
+  </script>

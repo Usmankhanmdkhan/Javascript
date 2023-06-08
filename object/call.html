@@ -1,0 +1,17 @@
+<script>
+
+
+  //we use call method to use particular variable or a function inside another fucntion instead of writting it again
+  var name = 'sachin';
+
+  function sayHi() {
+    console.log(this, this.name);  //here it is pointing to global
+  }
+  sayHi();
+
+  let obj1 = { name: 'Rahul' }
+  sayHi.call(obj1);                // inside sayHi() this = obj1
+
+  let obj2 = { name: 'Deepak' }
+  sayHi.call(obj2);                // inside sayHi() this = obj2
+</script>x
