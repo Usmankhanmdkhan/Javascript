@@ -10,8 +10,10 @@
 
 <body>
     <script>
+
         function f1() {
-            let sum = 0;
+            console.log(arguments,Array.isArray(arguments));  //its not an array but an array like structure
+            let sum = 0;                                      //we cant use array methods inside it
             for (let i of arguments) {
                 sum = sum + i;
             }
@@ -20,6 +22,40 @@
 
         f1(20, 30, 20);
 
+        function f2() {
+            let sum = 0;
+            for (i = 0; i < arguments.length; i++) {
+                sum = sum + arguments[i];
+            }
+            console.log(sum);
+        }
+
+        f2(20, 30, 50);
+
+
+    //using this is prefereble
+
+        function f3(...arr) {                       //here ...arr its a rest parameter and a parameter to function 
+            let sum = 0;                            //if we write ... while writing a function its rest parameter
+            for (let i of arr) {                    //while calling fucntion or breaking down array its a spread operator
+                sum = sum + i;
+            }
+            console.log(sum); 
+        }
+ 
+        f3(10,20,30,10);                           // here we passed arguments
+
+
+       function test(a,b,...c){
+
+       document.write(`${a} <br> ${b} <br> ${c}`);
+       console.log(a,b,c);
+
+       }
+
+       test(10,20,30,40,50);          //a=>10 ; b=>20 ;        c=>[30,40,50]
+       test(10);                      //a=>10 ; b=>undefined ; c=>[]
+    
     </script>
 </body>
 
