@@ -9,6 +9,8 @@ console.log(`Subtraction is ${subResult}`);
 f1();
 
 //ES - module System
-// if it is default, the name can be diff
+//if it is default, the name can be diff
 //cant write multiple default export in one file if u try the dublicate export of default error shows
 //writing filename .mjs because node js takes js file in common js module system by default  
+//default word can be only used for classes and function not for variables
+//named exports fucntions must have same name in both import nad export inside {}......
