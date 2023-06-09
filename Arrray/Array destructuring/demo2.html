@@ -1,0 +1,18 @@
+<script>
+    let a = 10, b = 20;
+    console.log(`a is ${a} and b is ${b}`);
+
+    //swapping ES5 using third variable
+
+    let temp;
+    temp=a;
+    a=b;
+    b=temp;
+
+    console.log(`a is ${a} and b is ${b}`);
+
+    //swapping ES6 array destructuring
+    [a,b]=[b,a];
+    console.log(`a is ${a} and b is ${b}`); 
+
+</script>
