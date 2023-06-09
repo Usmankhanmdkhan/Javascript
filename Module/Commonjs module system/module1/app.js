@@ -22,3 +22,4 @@ console.log(obj.yy);           //30
 // PS C:\Users\PATHAN\OneDrive\Desktop\Javascript> cd .\Module
 // PS C:\Users\PATHAN\OneDrive\Desktop\Javascript\Module> cd .\module1
 // PS C:\Users\PATHAN\OneDrive\Desktop\Javascript\Module\module1> node .\app.js
+// C:\Users\PATHAN\OneDrive\Desktop\Javascript\Module> cd.. can use this to go back to previous folder
