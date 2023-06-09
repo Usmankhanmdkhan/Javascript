@@ -1,0 +1,27 @@
+<html>
+
+<body>
+  <script>
+    /* function printUserDetails(user) {                                                 //here we are passing object
+      document.write(`Hello ${user.fName} ${user.lName} you are ${user.age} years old
+      You are from ${user.add} your DOB is ${user.dob}`)
+    } */
+
+    // to avoid writing above user. again and again we do destucturing
+
+    function printUserDetails({ fName, age, add, dob, lName }) {          //here we destructuring object in function
+      document.write(`Hello ${fName} ${lName} you are ${age} years old
+      You are from ${add} your DOB is ${dob}`)
+    }
+    let user = {
+      fName: 'sachin',
+      lName: 'Tendulkar',
+      age: 35,
+      add: 'mumbai',
+      dob: '21-03-1980'
+    }
+    printUserDetails(user);   //passing object //calling function with object but function will destructure it as above
+  </script>
+</body>
+
+</html>
