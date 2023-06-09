@@ -15,9 +15,9 @@
         add.call(obj1, 2, 3);     //9
 
         let arr = [2, 3];
-        add.call(obj1, arr);      // here only a gets value b is not as a takes whole array  42,3undefined    
+        add.call(obj1, arr);        // here only a gets value b is not as a takes whole array  42,3undefined    
         add.call(obj1, [5, 6]);     // same for here                                           45,6undefined
-        add.call(obj1, ...arr)     //it will work as we used spread operator                  9
+        add.call(obj1, ...arr)      //it will work as we used spread operator                  9
 
         add.apply(obj1, arr);     //it will work with apply method\                          9
         add.apply(obj1, [5, 6]);  //it will work                                             15
