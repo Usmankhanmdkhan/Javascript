@@ -1,0 +1,32 @@
+<script>
+    let arr = [10, 20, 30, 40, 50, 10, 30, 50];         
+    console.log(typeof arr , arr, Array.isArray(arr), arr instanceof Array);  
+    //object (8) [10, 20, 30, 40, 50, 10, 30, 50] true true
+
+    let uniqueSet = new Set(arr);
+    console.log(uniqueSet, typeof uniqueSet);           //Set(5) {10, 20, 30, 40, 50} object
+
+    let uniqueArr = [...uniqueSet];
+    console.log(uniqueArr);                             //[10, 20, 30, 40, 50]
+
+    console.log(`=========================================================`);
+
+    // let obj={a:[10,20,30]};
+    // console.log(obj);
+
+    // obj2=[...obj];
+    // console.log(obj2);           //gives error it is not iterable bcoz set is an object like structure without key
+
+    let obj3= new Set();
+    obj3.add(10);
+    obj3.add(20);
+    obj3.add(30);
+
+    console.log(obj3);              //Set(3) {10, 20, 30}
+    
+    console.log(...obj3);           //10 20 30
+
+    console.log([...obj3]);          //[10,20,30]
+
+
+</script>

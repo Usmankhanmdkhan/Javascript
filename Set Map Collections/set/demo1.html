@@ -1,0 +1,26 @@
+<script>
+    //sets are ordered list of values which contains no duplicates 
+
+    let cars = new Set(); //create a Set object   Set is an object
+
+    //add data to Set
+    cars.add(`tata`);
+    cars.add(`honda`);
+    cars.add(`honda`);
+    cars.add(`jaguar`);
+    cars.add(`Tata`);
+
+    //size of Set 
+    console.log(cars.size);   //4   the second honda duplicate contain is ignored 
+    console.log(cars);        //    {'tata', 'honda', 'jaguar', 'Tata'}
+
+    //check if element is there in Set
+    console.log(cars.has(`honda`));          //true
+    console.log(cars.has(`audi`));           //false
+
+    //Iterate Set Items                      //only for of loops is good for set    
+    for (let car of cars) {
+        console.log(car);
+    }
+
+</script>
