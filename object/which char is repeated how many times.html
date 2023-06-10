@@ -1,0 +1,34 @@
+<script>
+    let str = `entertainment`;
+    let res = {};
+
+    for (char of str) {
+        res[char] = res[char] ? res[char] + 1 : 1  //ternory operator
+
+        //if res[char]= res[char]  if it has letter before then add with +1 or else it would be the 1
+        //res[char]=res[char]  means if res[e]=res[e]  if we found res[e] already there
+        //but first time it would be 1 as condition not met :1      
+        // res[e]=res[e] condition fails                             res[e]=1;
+        // res[e]=res[n] condition fails                             res[n]=1
+        // res[e]=res[t] condition fails                             res[t]=1
+        // res[e]=res[e] condition true                              res[e]+1=> 1+1=2
+        // continued till complete loop
+    }
+    console.log(res);
+
+
+    //using Map
+
+    let res2 = new Map();
+
+    for (char of str) {
+        //console.log(char);
+        if (res2.has(char)) {
+            res2.set(char, res2.get(char) + 1)   //if condition meets passing key and its value+1    
+        }
+        else {
+            res2.set(char, 1);                   //passing key, value to map 
+        }
+    }
+    console.log(res2);
+</script>

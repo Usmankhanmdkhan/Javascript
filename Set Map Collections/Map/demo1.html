@@ -1,0 +1,44 @@
+<script>
+    //Maps are clooections of keys and values of any type
+    //Map is a predefined class
+    //Maps are related to objects  
+   
+      const myMap = new Map();                        //Creation of Map
+
+      // set data to Map
+      myMap.set("name", "sanjay");                    //setting data to Map
+      myMap.set("age", 30);
+      myMap.set("sal", 5000);
+      myMap.set("sal", 6000);
+      Map.prototype.clgname=`NAreshit`;               //passing prototype to Map class
+      console.log(myMap);                             //Map(3) {'name' => 'sanjay', 'age' => 30, 'sal' => 6000}
+
+      // get data from Map
+      console.log(myMap.get("name"));                 //sanjay 
+
+      // size of Map
+      console.log(myMap.size);                        //3
+
+      // Iterate Map object
+      for (const [key, value] of myMap) {
+        console.log(`${key} = ${value}`);             //name=sanjay age=30 sal=6000
+      }
+
+      //for in loop
+      // for (let key in myMap){
+      //   console.log(`${key} ===> ${myMap[key]}`)   //not workable here dont use 
+      // }
+
+      // check a key is there or not
+      console.log(myMap.has("name"));                 //true 
+      console.log(myMap.has("address"));              //false
+
+      // delete a property from Map
+      myMap.delete("sal");                            
+      console.log(myMap);                             //Map(2) {'name' => 'sanjay', 'age' => 30}
+
+      //clear a Map
+      myMap.clear();
+      console.log(myMap);                             //Map(0) {size: 0}
+
+</script>

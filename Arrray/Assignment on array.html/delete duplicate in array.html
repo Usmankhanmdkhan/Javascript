@@ -13,6 +13,16 @@
         // 5. write a program to delete the duplicate elements from an array.
         let a = [10, 50, 60, 264, 9, 359, 10, 60, 265, 50, 95, 8, 656];
 
+        //Set method can be used tooo
+        let uniqueset=new Set(a);   //here we are passing a as a set
+        //uniqueset.add[a] cant pass like that becoz it passes by reference and and duplicate values not get deleted as
+        //we are passing array which get passed by reference 
+        console.log(uniqueset);
+        uniquesetArr=[...uniqueset];                           //used spread operator
+        console.log(uniquesetArr);  //here we got the answer 
+
+
+        //Filter Method
         // // let newarr = a.filter((e,a,q)=>{
         // // //console.log(e);                 //it gives elements 
         // // //console.log(a);                 //it gives index 
@@ -20,14 +30,13 @@
         // // })
 
         let newarr = a.filter((item, pos) => {
-
             //console.log(a.indexOf(item));    //[0,1,2,3,4,5,0,2,8,1,10,11,12]
             //console.log(pos);                //[0,1,2,3,4,5,6,7,8,9,10,11,12]
             return a.indexOf(item) == pos;  //[10,50,60,264,9,359,265,95,8,656]
             
         });
 
-        console.log(newarr);
+        console.log(newarr);               //[10, 50, 60, 264, 9, 359, 265, 95, 8, 656]
  
         //for non repeated items
 

@@ -21,7 +21,14 @@
             //output={[emp.Name]=> Lithisha : [emp]}
             output[emp.Name].push(emp);
 
-            //This code is written in JavaScript. It creates an object called output which is initially empty. It then iterates over an array of objects called employees. For each employee object, it checks if the employee’s name already exists as a key in the output object. If it does, it pushes the current employee object into the array of employees associated with that name. If it doesn’t, it creates a new key in the output object with the employee’s name and sets its value to an array containing the current employee object. The final result is an object where each key is an employee name and its value is an array of objects containing all employees with that name.
+            //This code is written in JavaScript. It creates an object called output which is initially empty.
+            //  It then iterates over an array of objects called employees. For each employee object, 
+            //  it checks if the employee’s name already exists as a key in the output object. If it does, 
+            //  it pushes the current employee object into the array of employees associated with that name. 
+            //  If it doesn’t, it creates a new key in the output object with the employee’s name and 
+            //  sets its value to an array containing the current employee object. 
+            //  The final result is an object where each key is an employee name and its value is 
+            //  an array of objects containing all employees with that name.
         }
         else {
             output[emp.Name] = [emp];   //passing emp in array
@@ -30,35 +37,46 @@
 
     console.log(output);
 
-    for (let key of Object.keys(output)) {  //outputkeys =lithisha,rakshu.....
-        //keys of object keys
-        //there keys are ind 0 ,ind 1,
-        console.table(output[key]);
-    }
+    // let res = {};
+    // for (emp of  employees) {
+    //     for (char in emp) {
+    //         console.log(char)
+    //         res[emp[char]] = res[emp[char]] ? res[emp[char]] + 1 : 1
+    //     }
+    // }
+
+    // console.log(res);
+
+
+    // for (let key of Object.keys(output)) {  //outputkeys =lithisha,rakshu.....
+    //     //keys of object keys
+    //     //there keys are ind 0 ,ind 1,
+    //     console.table(output[key]);
+    // }
 
 
 
-    //second method
-    let labours = [
-        { eId: 101, name: "sanjay", sal: 5000 },
-        { eId: 104, name: "deepak", sal: 8000 },
-        { eId: 103, name: "ranjan", sal: 7000 },
-        { eId: 102, name: "manoj", sal: 9000 },
-        { eId: 101, name: "sanjay", sal: 5000 },
-        { eId: 108, name: "deepak", sal: 5000 },
-    ];
+    // //second method
+    // let labours = [
+    //     { eId: 101, name: "sanjay", sal: 5000 },
+    //     { eId: 104, name: "deepak", sal: 8000 },
+    //     { eId: 103, name: "ranjan", sal: 7000 },
+    //     { eId: 102, name: "manoj", sal: 9000 },
+    //     { eId: 101, name: "sanjay", sal: 5000 },
+    //     { eId: 108, name: "deepak", sal: 5000 },
+    // ];
 
-    function groupBy(arr, key) {
-        let finalResult = arr.reduce((result, currentObject) => {
-            const val = currentObject[key]; // 'name' val='sanjay'
-            result[val] = result[val] || []; // {sanjay:[]}
-            result[val].push(currentObject);
-            return result;
-        }, {});
+    // function groupBy(arr, key) {
+    //     let finalResult = arr.reduce((result, currentObject) => {
+    //         const val = currentObject[key]; // 'name' val='sanjay'
+    //         result[val] = result[val] || []; // {sanjay:[]}
+    //         result[val].push(currentObject);
+    //         return result;
+    //     }, {});
 
-        return finalResult;
-    }
+    //     return finalResult;
+    // }
 
-    console.log(groupBy(labours, "name"));
+    // console.log(groupBy(labours, "name"));
 
 </script>

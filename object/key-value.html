@@ -9,9 +9,11 @@
 				age: 35,
 				address: "mumbai",
 			}
+			
 			for (x in emp) { //x=empId,x=name,x=age,x=address
 				document.write(x + "------" + emp[x])
 				document.write('<br>');
+				console.log(x + ` === ` + emp[x]);
 			}
 			document.write('<hr>');
 
@@ -22,6 +24,11 @@
                                                       // which is not there hence through undefined
 				document.write('<br>');
 			}
+
+			//it will not work
+			// for (let x of emp){
+			// 	console.log(emp[x]);
+			// }
 		</script>
 </body>
 

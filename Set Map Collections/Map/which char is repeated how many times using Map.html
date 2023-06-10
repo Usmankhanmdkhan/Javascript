@@ -1,0 +1,26 @@
+<script>
+    let str= `entertainment`;
+    let res2 = new Map();
+
+    for (char of str){
+        //console.log(char);
+        if(res2.has(char)){
+            res2.set(char,res2.get(char)+1);  //res2.get(char) means ex res2.get(e)=1 at first and on second time it would be 
+                                              // 1+1  thats how it gets added 
+        }
+        else {
+            res2.set(char,1);
+        }
+    }
+    console.log(res2);
+
+    //terniory operator
+    let res = new Map();
+
+    for (char of str) {
+        res[char] = res[char] ? res[char] + 1 : 1  //ternory operator
+
+        //if res[char]= res[char]  if it has letter before then add with +1 or else it would be the 1
+    }
+    console.log(res);
+</script>
