@@ -1,0 +1,24 @@
+<html>
+
+<body>
+  <script>
+
+    //refer js visualizer to undersatnd how callstack works  (https://www.jsv9000.app/)
+    console.log("hellooooooo");
+
+    function f1() {
+      console.log("I am f1 function ");
+    }
+    setTimeout(f1, 3000);
+
+    for (let i = 1; i <= 10000; i++) { // 10 sec
+      console.log("i am from loop ");
+    } 
+
+    //after completing loop setTimout will be excecuted as it will be added to task que as class stack became
+    //empty event loop will add function in task que to callstack
+
+  </script>
+</body>
+
+</html>

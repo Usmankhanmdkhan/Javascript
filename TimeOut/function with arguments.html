@@ -1,0 +1,14 @@
+<html>
+
+<body>
+  <script>
+    // parameterized function
+    function add(a, b) {
+      document.write(`Addition of ${a} & ${b} is ${a + b}`);
+    }
+    // setTimeout(add(2, 3), 3000);                        //it will not work it will invoked immediately
+     setTimeout(add, 3000, 10, 20);                        //pass function,time in ms,then function arguments
+  </script>
+</body>
+
+</html>

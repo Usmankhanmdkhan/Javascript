@@ -1,0 +1,17 @@
+<html>
+
+<body>
+  <center>
+    <h1></h1>
+  </center>
+  <script>
+    function printTime() {
+      let date = new Date();
+      let time = date.toLocaleTimeString();
+      document.querySelector('h1').innerText = time;
+    }
+    setInterval( printTime , 1000 );
+  </script>
+</body>
+
+</html>
