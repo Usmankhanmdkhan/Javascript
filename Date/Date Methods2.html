@@ -1,0 +1,36 @@
+<html>
+
+<body>
+    <script>
+        var d = new Date();
+
+        document.write(d);                            //Sun Jun 11 2023 17:20:45 GMT+0530 (India Standard Time)
+        document.write("<br><br>");
+
+        document.write(d.toLocaleString());           //11/6/2023, 5:26:06 pm
+        document.write("<br><br>");
+
+        document.write(d.toDateString());             //Sun Jun 11 2023
+        document.write("<br>");
+
+        document.write(d.toTimeString());             //17:20:45 GMT+0530 (India Standard Time)
+        document.write("<br><br><br>");
+
+        document.write(d.toLocaleDateString());       //11/6/2023
+        document.write("<br>");
+
+        document.write(d.toLocaleTimeString());       //5:20:45 pm
+        document.write("<br>");
+
+        // for US
+        document.write(
+            d.toLocaleString("en-US", { timeZone: "America/New_York" })             //6/11/2023, 7:50:45 AM
+        );
+
+        document.write("<br>");
+        // for London Time (GB-UK English)
+        document.write(d.toLocaleString("en-GB", { timeZone: "Europe/London" })); //6/11/2023, 7:50:45 AM
+    </script>
+</body>
+
+</html>

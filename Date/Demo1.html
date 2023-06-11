@@ -1,0 +1,25 @@
+<script>
+    let ob = new Date();         //creating Date object     to create a object from class new word is neccessary
+    console.log(ob);             //it would give current time date day running in pc
+
+    let a = ob.getDate();
+    console.log(a);
+
+    let b = ob.getDay();         //it would return a number
+    console.log(b);
+
+    let c = ob.getMonth();       //it would return a month before
+    console.log(c);
+
+    let d = ob.getMonth() + 1;   //it would return a present month
+    console.log(d);
+
+    let e = ob.getFullYear();    //it would return a present year
+    console.log(e);
+
+
+    let day = [`sunday`, `monday`, `tuesday`, `wed`, `thu`, `fri`, `sat`];
+    let today = day[ob.getDay()];
+    console.log(today);                                           //here it is workng fine
+
+</script>

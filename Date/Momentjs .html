@@ -1,0 +1,21 @@
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <!--copy link from moment js library and paste it in file-->
+    <!--search for moment.js cdn and visit jsdelivr site to get cdn -->
+    <!--on moment.js website it will provide different formats like moment().format('dddd'); -->
+    <!--Pass date variable inside () of moment function-->
+
+    <script>
+
+        let date = new Date();                           //create date object
+
+        let dateFormat1 = moment(date).format('MMMM Do YYYY, h:mm:ss a');
+        document.write(dateFormat1 + '<br>');            //June 11th 2023, 5:36:03 pm   
+
+        let currentMonth = moment(date).format('MMMM');
+        document.write(currentMonth + '<br>');           //June
+
+        let dayName = moment(date).format('dddd');       //Sunday
+        document.write(dayName);
+    </script>
+</body>

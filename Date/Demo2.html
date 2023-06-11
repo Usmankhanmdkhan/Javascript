@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script>
+        const date = new Date();                      //creating date object named date
+
+        const [day, month, year] = [                  //Array destructuring for day month and year
+            date.getDate(),
+            date.getMonth() + 1,
+            date.getFullYear(),
+        ];
+
+        const [hour, minutes, seconds] = [            //Array destructuring for hour min and second
+            date.getHours(),
+            date.getMinutes(),
+            date.getSeconds(),
+        ];
+        console.log(month, day, year);               //running inside system            ex:6  11 2023
+        console.log(hour, minutes, seconds);         //running inside system            ex:17 15 10
+    </script>
+</body>
+
+</html>

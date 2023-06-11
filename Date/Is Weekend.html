@@ -1,0 +1,36 @@
+<html>
+
+<body>
+  <script>
+    let is_weekend = function (dateObj) {           
+      //console.log(dateObj);              //date we are passing as argumrnt to function ex: "October 1, 2022"
+      let dt = new Date(dateObj);
+      //console.log(dt);                   //now passed argument becomes date object here
+      let dayNumber = dt.getDay();         // 0-6
+
+      if (dayNumber == 6 || dayNumber == 0) {
+        return "weekend";
+      } else {
+        return "Not weekend";
+      }
+    };
+    console.log(is_weekend("October 1, 2022"));   //weekend
+    console.log(is_weekend("October 2, 2022"));   //weekend
+    console.log(is_weekend("October 3, 2022"));   //not weekend
+    console.log(is_weekend("October 4, 2022"));   //not weekend
+  </script>
+
+  <script>
+    //to understand what happend in above function
+    let todaysdate = `October 1, 2022`            //its a string
+    console.log(todaysdate);                      //October 1, 2022
+    let date = new Date(todaysdate);              //converting strinf to date
+    console.log(date);                            //Sat Oct 01 2022 00:00:00 GMT+0530 (India Standard Time)
+    
+    //using date method to find day number 
+    let daynum = date.getDay(); 
+    console.log(daynum);                          //6       means saturday
+  </script>
+</body>
+
+</html>
