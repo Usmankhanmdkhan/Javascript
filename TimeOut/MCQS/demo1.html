@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <script>
+        console.log(1);
+        setTimeout(function () { console.log(2); }, 3000);
+        setTimeout(function () { console.log(3); }, 0);
+        console.log(4);      
+    </script>
+</body>
+
+</html>
+
+<script>
+    
+    //the way it would assign step by step
+    // console.log(1)
+    // setTimeout(2)
+    // setTimeout(3)                 //both settimeout will wait in task queue untill callstack became empty
+    // console.log(4)
+
+    // then setTimeout with less time
+    // then setTimeout with high time
+
+
+</script>

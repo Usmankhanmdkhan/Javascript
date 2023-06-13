@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    <script>
+        setTimeout(() => console.log("timeout"), 0);
+        Promise.resolve().then(() => console.log("promise"));
+        console.log("normal code");
+
+
+        // execution context 
+        // settimeout will wait in task queue
+        // promise will wait in task queue
+        // console log()      //global context
+        // Promise            //micro task queue
+        // settimeout         //task queue
+
+    </script>
+</body>
+
+</html>

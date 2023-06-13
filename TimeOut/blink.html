@@ -4,7 +4,7 @@
 	<h1>
 		<script>
 			function startBlinking() {
-				setInterval(function () { blink(), 1000 });
+				setInterval(blink,1000);
 			};
 
 			//fucntion blink()
@@ -24,11 +24,6 @@
 				}, 500);
 			}
 
-			//Imp note while using settimeout or setintervals inside a function pls make sure 
-			//   function blink() {setTimeout(function () {
-			// 	   document.getElementById('blink').style.display = "inline";
-			//   }, 500);
-			//pls make sure u write function word inside settimeout/intervals function
 
 			startBlinking();
 		</script>
