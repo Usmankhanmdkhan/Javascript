@@ -1,0 +1,7 @@
+<script>
+    for (/*var*/ let i = 1; i <= 5; i++) {    //var will not work bcoz it doesnot have black scope use let
+      setTimeout(function () {
+        document.writeln(i);
+      }, 1000*i);                             //*i is compulsory  *i means for each i 
+    }
+  </script>
