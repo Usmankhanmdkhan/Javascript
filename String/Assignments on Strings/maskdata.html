@@ -52,6 +52,14 @@
         result=firstsec+secondsec+thirdsec
         console.log(result);  
 
+        //mask all
+        function hideString(str) {
+            return str.replace(/[a-zA-Z]/g, 'x')
+        }
+        let hiddenStr = hideString('Hello World');           //function calling
+        console.log(hiddenStr);
+        console.log('Masking Completed...');
+
 
     </script>
 </body>

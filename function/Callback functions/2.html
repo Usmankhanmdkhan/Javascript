@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <script>
+        function doHomework(subject, started, finished) {   //higher order fucntion with parameters
+            started();                                      //callback function
+            alert(`Doing my ${subject} homework.`);         //own parameter 
+            finished();                                     //callback function
+        }
+
+        function started() {
+            alert('Started my homework');
+        }
+        function finished() {
+            alert('Finished my homework');
+        }
+
+
+        doHomework('math', started, finished);             //function calling
+    </script>
+</body>
+
+</html>
