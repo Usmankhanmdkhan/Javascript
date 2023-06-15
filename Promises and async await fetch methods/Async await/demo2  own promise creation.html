@@ -1,0 +1,26 @@
+<script>
+    function demo1() {
+        return "response from demo1"
+    }
+    let res1 = demo1();
+    console.log(res1);                  //"response from demo1"
+
+
+    function demo2() {
+        let promiseobj = new Promise(function (resolve, reject) {
+            resolve("response from demo2")                          //this data is inside promise 
+        })
+        return promiseobj;
+    }
+
+    let res2 = demo2();
+    console.log(res2)                   //it will return promise we wrote function inside promise
+
+    res2.then(function (response) {
+        console.log(response);          //data => "response from demo2"
+    },
+        function (err) {
+            console.log(err);           //if error
+        }
+    ); 
+</script>

@@ -1,0 +1,53 @@
+<script>
+    function add(a, b) {
+        let result;                  //these steps are synchronous 
+        result = a + b;              //we cant add a+b if we dont have result variable
+        return result;               //we cant return result if we didnt added them
+    }
+
+    // console.log(add(2,3));        //5
+    let addresult = add(2, 3);
+    console.log(addresult);          //5
+
+    //=================================================================================================================
+
+    function sub(a, b) {
+        let result;                                       //synchronous step
+        setTimeout(function () { result = a - b }, 3000); //settimeout is a asynchronous function it will not
+                                                          //ask next statement wait to for itself to completed
+                                                          //hence next line return result is executed
+        return result;                                    //synchronous step                                     
+    }
+    let subresult = sub(5, 2);
+    console.log(subresult);      //undefined bcoz settimeout will return value after 3 sec and it is
+                                 //asynchronous not ask further statement to wait for it
+                                 //by the time its getting calculated before it other line getting executed
+                                 //hence result is undefined
+
+    //===============================================================================================================                                 
+
+    //to get wanted result need to write a promise there
+
+    function substract(a, b) {
+        let promiseobj = new Promise(function (resolve, reject) {
+            if (typeof a == `number` && typeof b == `number`) {
+                setTimeout(function () {
+                    resolve(a - b), 3000
+                })
+            }
+            else { reject(`Invalid number`) }
+        })
+        return promiseobj                         //most important we have to return promise object
+    }
+    let result = substract(5, 2);
+    console.log(result);                          //promise object <pending>
+
+    result.then(function (finalresult) {
+        console.log(finalresult);                 //result
+    },
+
+        function (err) {
+            console.log(err)                      //if there is an error
+        }
+    )
+</script>

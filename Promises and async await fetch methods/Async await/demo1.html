@@ -1,0 +1,32 @@
+<script>
+    //async await have to write with eachother only
+    //await is only valid in async function thats the reason we are writing it inside async function
+
+    //in line number 11 when we wrote await there it says line number 13 x`will not be executed untill unless line number 11 go and fetches the data from url.....
+    //means it is synchronous
+    //await in line number will make other statements wait fro promise to resolve 
+
+    async function getData() {
+        try {
+            let response = await fetch("https://jsonplaceholder.typicode.com/users");//getting response from  
+                                                                                     //fetch method
+            let finalresponse = await response.json();//finalresponse is converting response 
+                                                      //into response.json ()
+            console.log(finalresponse);               //expected result
+        }
+        catch (err) {
+            console.log(`something went wrong`);
+        }
+    }
+
+    getData();
+    
+    //to catch error we should use try catch method not .then method
+    //the await is in async function so it will only sychrounous for that function statements not others
+    //async means it will make other statements rather than those under functional statements to behave asynchrounously
+    //let response = await fetch("https://jsonplaceholder.typicode.com/users")
+    //let finalresponse = await response.json()
+    //for this steps only are way is synchronous 
+    //we cant convert response into .json till we fetch data we cant console finalresponse till we dont convert into json....
+    
+</script>

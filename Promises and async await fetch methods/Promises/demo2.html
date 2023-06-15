@@ -1,0 +1,33 @@
+<script>
+
+    //this is again promisehell as we are writting promise inside another promise
+
+    let url = "https://jsonplaceholder.typicode.com/users";
+    let userpromise = fetch(url);                          //it return promise
+    console.log(userpromise);                              //pending
+
+    userpromise.then(
+        function (response) {
+            console.log(response);                         //we have an object but not the data wee want
+
+            let convertToJsonpromise = response.json();    //getting data in array format
+            console.log(convertToJsonpromise);             //its pending
+
+
+            convertToJsonpromise.then(
+                function (finalresponse) {
+                    console.log(finalresponse);            //if everything goes well we grt expected data here
+                },
+
+                function (err) {
+                    console.log(err)
+                }
+            )
+        },
+        function (error) {
+            console.log(error);
+        }
+    );
+
+    
+</script>

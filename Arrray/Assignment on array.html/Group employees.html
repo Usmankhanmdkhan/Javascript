@@ -31,11 +31,13 @@
             //  an array of objects containing all employees with that name.
         }
         else {
-            output[emp.Name] = [emp];   //passing emp in array
+            output[emp.Name] = [emp];              //passing emp in array
         }
     });
 
     console.log(output);
+    // console.table(output);
+    // console.log(Object.keys(output));
 
     // let res = {};
     // for (emp of  employees) {
@@ -48,11 +50,11 @@
     // console.log(res);
 
 
-    // for (let key of Object.keys(output)) {  //outputkeys =lithisha,rakshu.....
-    //     //keys of object keys
-    //     //there keys are ind 0 ,ind 1,
-    //     console.table(output[key]);
-    // }
+    for (let key of Object.keys(output)) {  //outputkeys =lithisha,rakshu.....
+        //keys of object keys
+        //there keys are ind 0 ,ind 1,
+        console.table(output[key]);
+    }
 
 
 

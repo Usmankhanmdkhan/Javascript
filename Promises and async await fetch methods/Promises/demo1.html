@@ -1,0 +1,33 @@
+<script>
+    //for now i dont have something that i will definetely get in future
+
+    // -A promise is an object that holds the future value of an asynchronous operation.
+    // -A Promise object represents a value that may not be available yet, but will be resolved/available at some point in the future.
+    // -Promise object can have different states:- pending, resolved/fulfilled, rejected.
+    // ex:-if we request some data from a server, promise promises us to get that data 
+    // that we can use in the future.  -->
+
+    //lets understand promise
+    let res1 = Math.max(10, 20, 30);
+    console.log(res1);                                                 //returns a quick response
+
+    let a = [10, 20, 30];
+    let res2 = Math.max.apply({}, a);
+    console.log(res2);                                                 //returns a quick response
+
+    let b = [10, 20, 30];
+    let res3 = Math.max(...b);
+    console.log(res3);                                                 //returns a quick response
+
+        let userpromise = fetch("https://jsonplaceholder.typicode.com/users");
+        console.log(userpromise);                                      //returns a promise object
+
+        userpromise.then(function (res) {                              //if everything goes write it gives res
+            console.log(res);
+        },
+            function (err) {                    //if there is any prblm in url it will give error
+                console.log(err);
+            });
+
+
+</script>

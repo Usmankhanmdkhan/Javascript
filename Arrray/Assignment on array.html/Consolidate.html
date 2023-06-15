@@ -19,7 +19,7 @@
         let result = [];
 
         employees.map((emp) => {
-            let foundemp = result.find((ele) => { return ele.eId == emp.eId })
+            let foundemp = result.find((ele) => { return ele.eId == emp.eId }) //finding in result array 
 
             if (!foundemp) {
                 result.push(emp);

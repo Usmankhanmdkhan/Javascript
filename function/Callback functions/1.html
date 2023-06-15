@@ -2,7 +2,26 @@
 
 <body>
     <script>
+        // CallBack
+        // --------
+        // -A Callback is a function that is passed into another function as an argument to be executed later.
+        // -callback function is run inside of the function it was passed into.
+        // -A function that accepts other functions as arguments is called a higher-order function,
+        //  which contains the logic for when the callback function should be executed.
+
+
+        // Callback hell
+        // -------------
+        // -Callback hell will have multiple callbacks nested after each other. 
+        // -It can happen when you do an asynchronous activity that’s dependent 
+        //  on a previous asynchronous activity.
+        // -Solutions to callback hell:
+        // 	1. Split functions into smaller functions.
+        // 	2. Using Promises.
+        // 	3. Using Async/await.
+
         arr = [10, 20, 11, 13, 15, 18];
+
         function f1(ele) {
             return ele % 2 == 0;
         }
