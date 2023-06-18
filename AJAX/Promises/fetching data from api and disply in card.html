@@ -17,31 +17,32 @@
     <button onclick="fetchdata()">fetchdata</button>
     <script>
         fetchdata = async function () {
-            response = await fetch(`https://dummyjson.com/products`);
-            finalrsponse = await response.json();
-            data = finalrsponse.products;
+            try {
+                let response = await fetch(`https://dummyjson.com/products`);
+                let finalresponse = await response.json();
+                let data = finalresponse.products;
+                console.log(data);                          //here we got expected data
 
-            console.log(data);                     //here we got expected data
+                let result = ``;
+                data.forEach((product) => {
+                    result = result +
+                        `<div class="col-sm-3">
+                        <div class="card">
+                        <img src=${product.images[0]} class="card-img-top" alt="..." height="200px"/>
+                            <div class="card-body">
+                                <h5 class="card-title">${product.title}</h5>
+                                <p class="card-text">${product.description}</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                            </div>;
+                            </div>`;
 
-            let result = ``;
-            data.forEach((product) => {
-                result = result + 
-                `<div class="card" style="width: 18rem;">
-                    <img src={product.images[0]} class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                            <h5 class="card-title">{product.title}</h5>
-                            <p class="card-text">{product.description}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                </div>`;
-
-            })
-            document.getElementById('row').innerHTML = result;
+                            document.querySelector('.row').innerHTML = result;
+                })
+            }
+            catch (err) { console.log(`something went wrong`) }
 
         }
-
-        fetchdata();
-
     </script>
 </body>
 
