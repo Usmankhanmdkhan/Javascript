@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script>
+
+        //promise hell  calling promises sequensially one after one 
+      function who() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("sanjay");
+          }, 1000);
+        });
+      }
+
+      function what() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("teaches Javascript");
+          }, 2000);
+        });
+      }
+
+      function where() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("in class");
+          }, 3000);
+        });
+      }
+      
+      who().then((res1) => { // promise hell
+        console.log("promise-1 resolved", res1);
+     
+        what().then((res2) => {
+          console.log("promise-2 resolved", res2);
+
+          where().then((res3) => {
+            console.log("promise-3 resolved", res3);
+
+            console.log(res1, res2, res3);
+          },function(err3){
+            console.log(err3)
+          });
+        },function(err2){
+          console.log(err2)
+        });
+      },function(err1){
+        console.log(err1)
+      });
+
+      //to avoid it refer next example async promise2.html
+    </script>
+  </head>
+  <body></body>
+</html>

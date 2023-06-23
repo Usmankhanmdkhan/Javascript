@@ -9,9 +9,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    .loading,
+    .loading {
+      display: none;
+    }
+
+    ;
+
+    /*or we can do .loading,.container{display:none}*/
     .container {
-      display:none;
+      display: none;
       /*display none on page load*/
     }
   </style>
@@ -39,8 +45,8 @@
         .then((response) => response.json())
         .then((finalResponse) => {
           console.log(finalResponse.products);
-          document.querySelector(".container").style.display = "block";      //after fetching data display block
-          document.querySelector(".loading").style.display = "none";   //after feting completed it would be none
+          document.querySelector(".container").style.display = "block"; //after fetching data display block
+          document.querySelector(".loading").style.display = "none";    //after feting completed it would be none
 
           let str = "";
           finalResponse.products.forEach((product) => {

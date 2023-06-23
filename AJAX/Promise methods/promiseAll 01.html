@@ -8,13 +8,14 @@
     // after  4 sec all get responded
 
     Promise.all([promise1, promise2, promise3])
-      .then(([res1, res2, res3]) => {
-        Promise.all([res1.json(), res2.json(), res3.json()])
-          .then(([data1, data2, data3]) => { console.log(data1, data2, data3) })
+      .then(([res1, res2, res3]) => {Promise.all([res1.json(), res2.json(), res3.json()])
+      .then(([data1, data2, data3]) => { console.log(data1, data2, data3) })
       },
         (err) => {
           console.log(`something went wrong`);
         })
+
+    //All promises  will execute simulteniously ...if only one api fail it through err  
 
     /* async function getData() {
       let [res1, res2, res3] = await Promise.all([promise1, promise2, promise3]);
@@ -24,13 +25,13 @@
     getData() */
 
 
-    async function getdata(){
+    async function getdata() {
       let response = await fetch("https://dummyjson.com/products");
       let finalresponse = await (response.json());
-      let data=finalresponse.products
+      let data = finalresponse.products
       console.log(data);
     }
-    
+
     getdata();
 
   </script>
