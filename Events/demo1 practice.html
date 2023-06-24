@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><textarea name="" id="" cols="30" rows="10" maxlength="50" onkeydown="myfun()"></textarea>
+        REMAINING CHAR :
+        <span>50</span>
+    </h1>
+
+    <script>
+        function myfun() {
+
+            let textvalue = document.querySelector(`textarea`).value;
+            let remaining = 50 - textvalue.length;
+
+            document.querySelector(`span`).innerHTML = remaining;
+        }
+
+    </script>
+</body>
+
+</html>

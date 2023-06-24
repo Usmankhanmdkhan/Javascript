@@ -1,0 +1,15 @@
+<html>
+
+<body oncontextmenu="f1(event)"> <!--either this way-->
+    disable right click
+    <script>
+        // document.addEventListener("contextmenu", f1); //context menu means on rightclick or this
+
+        function f1(e) {
+            e.preventDefault();
+            alert("right click is not allowed here")
+        }
+    </script>
+</body>
+
+</html>

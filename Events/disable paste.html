@@ -1,0 +1,18 @@
+<html>
+
+<body>
+    Ftest
+    <input type="text" value="" id="myInput" /> <!--here we can paste like always-->
+    <input type="text" value="" id="myInput2" onpaste='return false' /> <!--here we cant paste and no error msg-->
+    <input type="text" value="" id="myInput3" onpaste='f1(event)' /> <!--here we cant paste and error msg-->
+    <!--event is a predefined key so its necessary to write event there-->
+    <script>
+
+        function f1(e) {
+            e.preventDefault();
+            alert("you canot paste here, plz type");
+        }
+    </script>
+</body>
+
+</html>
